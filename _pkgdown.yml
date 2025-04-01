@@ -1,4 +1,4 @@
-url: https://dd-harp.github.io/ramp.xds
+url: https://dd-harp.github.io/ramp.forcing/
 navbar:
   left:
   - text: Articles
@@ -39,8 +39,6 @@ reference:
   - Development.none
   - Development.func
   - setup_no_development
-  - Health.none
-  - setup_no_health
 - title: Weather
   desc: |
     Specialized methods for weather
@@ -123,11 +121,8 @@ reference:
   desc: |
     Methods to implement resource availability
   contents:
-  - Resources
-  - Resources.static
   - Resources.setup
   - Resources.forced
-  - setup_resources_static
   - setup_resources_forced
 - subtitle: Other Blood Hosts
   desc: |
@@ -136,6 +131,13 @@ reference:
   - OtherBloodHosts
   - OtherBloodHosts.static
   - setup_other_blood_hosts_static
+- subtitle: Ovitraps
+  desc: |
+    Methods to simulate availability of other blood hosts
+  contents:
+  - OviTraps
+  - OviTraps.none
+  - setup_no_ovitraps
 - subtitle: Sugar
   desc: |
     Methods to simulate availability of sugar
@@ -157,7 +159,9 @@ reference:
   desc: |
     Methods for the availability and infectiousness of a visitor population
   contents:
+  - Visiting
   - Visiting.static
   - setup_visitors_static
   - Visiting.basic
   - setup_visitors_basic
+

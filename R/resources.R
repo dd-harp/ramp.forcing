@@ -1,7 +1,7 @@
 
 #' @title Modify resources and resource availability
 #' @description Implements [Resources] for the static model of resources
-#' @inheritParams Resources
+#' @inheritParams ramp.xds::Resources
 #' @return none
 #' @export
 Resources.setup <- function(t, pars) {
@@ -19,7 +19,7 @@ Resources.setup <- function(t, pars) {
 
 #' @title Methods for resources
 #' @description Implements [Resources]
-#' @inheritParams Resources
+#' @inheritParams ramp.xds::Resources
 #' @return [list]
 #' @export
 Resources.forced <- function(t, pars) {
@@ -48,21 +48,3 @@ setup_resources_forced <- function(pars){
   return(pars)
 }
 
-
-#' @title Modify resources and resource availability
-#' @description Implements [Resources] for the static model of resources
-#' @inheritParams Resources
-#' @return none
-#' @export
-Resources.setup <- function(t, pars) {
-
-  pars = Visiting(t, pars)
-  pars = OtherBloodHosts(t, pars)
-  pars = HabitatDynamics(t, pars)
-  pars = SugarDynamics(t, pars)
-  pars = AvailableSugar(pars)
-
-  class(pars$RESOURCES) <- "static"
-
-  return(pars)
-}
