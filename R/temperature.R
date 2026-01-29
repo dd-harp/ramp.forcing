@@ -5,6 +5,7 @@
 #' @param t current simulation time
 #' @param pars an **`xds`** object
 #' @return an **`xds`** object
+#' @noRd
 #' @export
 Temperature <- function(t, pars) {
   UseMethod("Temperature", pars$temperature)
@@ -14,6 +15,7 @@ Temperature <- function(t, pars) {
 #' @description The null model for temperature
 #' @inheritParams Temperature
 #' @return [list]
+#' @noRd
 #' @export
 Temperature.none <- function(t, pars) {
   return(pars)
@@ -22,6 +24,7 @@ Temperature.none <- function(t, pars) {
 #' @title Set up "no temperature"
 #' @param pars an **`xds`** object
 #' @return an **`xds`** object
+#' @noRd
 #' @export
 setup_no_temperature <- function(pars) {
   temperature <- 'none'
@@ -48,6 +51,7 @@ setup_temperature = function(Tname, pars, Topts=list()){
 #' @description The null model for temperature
 #' @inheritParams Temperature
 #' @return [list]
+#' @noRd
 #' @export
 Temperature.func <- function(t, pars) {with(pars$temperature,{
   pars$vars$Temperature = meanT*F_season(t)*F_trend(t)

@@ -1,10 +1,16 @@
 url: https://dd-harp.github.io/ramp.forcing/
 navbar:
   left:
+  - text: Setup
+    menu:
+    - text: Bionomic Parameters
+      href: articles/bionomic_setup.html
+    - text: EIP
+      href: articles/eip_setup.html
   - text: Articles
     menu:
-    - text: Vector Control Example
-      href: articles/vc_lemenach.html
+    - text: Forced Bionomics with Lags
+      href: articles/Upsilon.html
   - text: Functions
     href: reference/index.html
   right:
@@ -39,18 +45,6 @@ reference:
   - Development.none
   - Development.func
   - setup_no_development
-- title: Weather
-  desc: |
-    Specialized methods for weather
-  contents:
-  - Weather
-  - Weather.none
-  - Weather.dynamic
-  - setup_no_weather
-  - dynamic_weather
-  - dynamic_weather.none
-  - dynamic_weather.setup
-  - dynamic_weather.dynamic
 - subtitle: Temperature
   desc: |
     Specialized methods for temperature

@@ -7,9 +7,7 @@
 Resources.forced(t, pars)
 }
 \arguments{
-\item{t}{current simulation time}
-
-\item{pars}{a \link{list}}
+\item{t}{the time}
 }
 \value{
 [list]

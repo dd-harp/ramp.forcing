@@ -1,35 +1,37 @@
 # Methods to set up variables describing exogenous forcing by sugar
 
 #' @title Set the values of exogenous variables describing sugar
-#' @description This method dispatches on the type of `pars$SUGAR`.
+#' @description This method dispatches on the type of `xds_obj$SUGAR`.
 #' @param t current simulation time
-#' @param pars a [list]
-#' @return [list]
+#' @param xds_obj an **`xds`** object
+#' @return an **`xds`** object
+#' @noRd
 #' @export
-SugarDynamics <- function(t, pars) {
-  UseMethod("SugarDynamics", pars$SUGAR)
+SugarDynamics <- function(t, xds_obj) {
+  UseMethod("SugarDynamics", xds_obj$SUGAR)
 }
 
 #' @title Set the values of exogenous variables describing sugar
 #' @description Implements [SugarDynamics] for the static model of sugar (do nothing)
 #' @inheritParams SugarDynamics
-#' @return [list]
+#' @return an **`xds`** object
+#' @noRd
 #' @export
-SugarDynamics.static <- function(t, pars) {
-  return(pars)
+SugarDynamics.static <- function(t, xds_obj) {
+  return(xds_obj)
 }
 
 #' @title Make parameters for the static model for sugar (do nothing)
-#' @param pars a [list]
+#' @param xds_obj an **`xds`** object
 #' @param Sugar describes sugar availability
-#' @return [list]
+#' @return an **`xds`** object
 #' @export
-setup_sugar_static <- function(pars, Sugar=0) {
+setup_sugar_static <- function(xds_obj, Sugar=0) {
   SUGAR <- list()
   class(SUGAR) <- 'static'
-  pars$SUGAR <- SUGAR
-  pars$vars$Sugar = Sugar
-  return(pars)
+  xds_obj$SUGAR <- SUGAR
+  xds_obj$vars$Sugar = Sugar
+  return(xds_obj)
 }
 
 
