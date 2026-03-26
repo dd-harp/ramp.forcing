@@ -1,0 +1,79 @@
+# Bed Net Multi-Round Contact
+
+#' @title Setup Muti-Round Bed Net Contact
+#'
+#' @description
+#' With multi-round bed net contact, there
+#' is a different relationship between contact
+#' and contact in each round
+#'
+#'
+#' @inheritParams setup_bednet_contact
+#' @export
+setup_bednet_contact.multiround = function(name="multiround", xds_obj, options=list()){
+  class(xds_obj$vector_control_obj) <- "dynamic"
+  class(xds_obj$bednet_obj) <- "dynamic"
+  xds_obj$bednet_obj$contact_obj = list()
+  class(xds_obj$bednet_obj$contact_obj) = "multiround"
+  N <- xds_obj$events_obj$bednet$N
+
+  contact <-  rep(0, N)
+  contact <-  with(options, contact)
+  xds_obj$events_obj$bednet$contact = contact
+
+  xds_obj <- setup_F_contact_bednet_multiround(xds_obj)
+
+  return(xds_obj)
+}
+
+#' @title Setup Muti-Round bednet Contact
+#'
+#' @description
+#' With multi-round bednet contact, there
+#' is a different relationship between contact
+#' and contact in each round
+#'
+#' @param xds_obj a **`ramp.xds`**  model object
+#' @param contact the new contact parameter
+#'
+#' @return a **`ramp.xds`**  model object
+#'
+#' @export
+change_bednet_contact_multiround = function(xds_obj, contact){
+  stopifnot(with(xds_obj, exists("events_obj")))
+  stopifnot(with(xds_obj$events_obj, exists("bednet")))
+  stopifnot(length(contact) == xds_obj$events_obj$bednet$N)
+  xds_obj$events_obj$bednet$contact -> contact
+
+  xds_obj <- setup_F_contact_bednet_multiround(xds_obj)
+
+  return(xds_obj)
+}
+
+#' @title Make `F_contact` for bednet
+#'
+#' @description Set up the bednet rounds
+#'
+#' @param xds_obj a **`ramp.xds`**  model object
+#'
+#' @return set up the rounds
+#'
+#' @export
+setup_F_contact_bednet_multiround = function(xds_obj){
+  xds_obj <- setup_bednet_rounds(xds_obj, xds_obj$events_obj$bednet$contact)
+  with(xds_obj$events_obj$bednet,{
+    rounds_par <- makepar_F_multiround(N, rounds)
+    xds_obj$bednet_obj$contact_obj$F_contact = make_function(rounds_par)
+    return(xds_obj)
+})}
+
+#' @title Set no bednet_contact
+#' @description The null model for bed net contact
+#' @inheritParams Bed_Net_Contact
+#' @return a **`xds`** object
+#' @export
+Bed_Net_Contact.multiround <- function(t, y, xds_obj) {
+  with(xds_obj$bednet_obj$contact_obj,{
+    xds_obj$bednet_obj$contact = F_contact(t)
+    return(xds_obj)
+  })}

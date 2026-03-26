@@ -1,4 +1,7 @@
-url: https://dd-harp.github.io/ramp.forcing/
+template:
+  bootstrap: 5
+  math-rendering: mathjax
+url: https://dd-harp.github.io/ramp.forcing
 navbar:
   left:
   - text: Setup
@@ -11,11 +14,23 @@ navbar:
     menu:
     - text: Forced Bionomics with Lags
       href: articles/Upsilon.html
+    - text: Bed Nets
+      href: articles/BedNets.html
+    - text: Vector Control Example
+      href: articles/vc_lemenach.html
+    - text: IRS
+      href: articles/IRS.html
+    - text: IRS - Insecticides
+      href: articles/IRS-insectides.html
+    - text: Mass Treatment
+      href: articles/MassTreatment.html
+    - text: Response Timelines
+      href: articles/ResponseTimelines.html
   - text: Functions
     href: reference/index.html
   right:
   - icon: fa-github
-    href: https://github.com/dd-harp/ramp.xds/
+    href: https://github.com/dd-harp/ramp.forcing/
 home:
   sidebar:
     structure:
@@ -28,7 +43,7 @@ home:
 reference:
 - title: Forcing
   desc: |
-    Specialized methods the null model (no exogenous forcing)
+    Specialized methods for the null model (no exogenous forcing)
   contents:
   - Forcing.dynamic
   - Forcing.setup
@@ -38,7 +53,7 @@ reference:
   - dynamic_forcing.dynamic
 - subtitle: Models
   desc: |
-    Specialized methods the null model (no exogenous forcing)
+    Specialized methods for the null model (no exogenous forcing)
   contents:
   - Shock.none
   - setup_no_shock
@@ -91,7 +106,7 @@ reference:
   - setup_hydrology_func
 - subtitle: Shock
   desc: |
-    Specialized methods for hydrology
+    Specialized methods for shocks
   contents:
   - Shock
   - Shock.none
@@ -102,7 +117,7 @@ reference:
   - setup_shock_func
 - subtitle: Development
   desc: |
-    Specialized methods for hydrology
+    Specialized methods for development
   contents:
   - Development
   - Development.none
@@ -127,7 +142,7 @@ reference:
   - setup_other_blood_hosts_static
 - subtitle: Ovitraps
   desc: |
-    Methods to simulate availability of other blood hosts
+    Methods to simulate ovitraps
   contents:
   - OviTraps
   - OviTraps.none
@@ -144,7 +159,7 @@ reference:
   - AvailableSugar.forced
 - subtitle: Habitat Dynamics and Availability
   desc: |
-    Specialized methods for weather
+    Specialized methods for habitat dynamics
   contents:
   - HabitatDynamics
   - HabitatDynamics.static
@@ -158,4 +173,258 @@ reference:
   - setup_visitors_static
   - Visiting.basic
   - setup_visitors_basic
-
+- title: Mass Treatment
+  desc: |
+    Specialized methods to manage mass drug administration
+  contents:
+  - setup_mass_treat_events
+  - add_mass_treat_events
+  - setup_mass_treat_multiround
+  - make_mass_treat_multiround
+  - make_F_mass_treat
+  - show_mda
+  - show_msat
+- title: Vector Control
+  desc: |
+    Specialized methods to manage the vector control junction
+  contents:
+  - setup_vector_control
+  - setup_vector_control.none
+  - setup_vector_control.dynamic
+  - VectorControl1.static
+  - VectorControl1.dynamic
+  - VectorControl2.static
+  - VectorControl2.dynamic
+- title: Bed Nets
+  desc: |
+    Specialized methods to implement Bed Nets
+  contents:
+  - setup_bednet_object
+  - setup_bednets
+  - Bed_Net_1
+  - Bed_Net_1.none
+  - Bed_Net_1.static
+  - Bed_Net_1.dynamic
+  - Bed_Net_2
+  - Bed_Net_2.none
+  - Bed_Net_2.static
+  - Bed_Net_2.dynamic
+- subtitle: Bed Net Access
+  desc: |
+    Specialized methods to model bed net access
+  contents:
+  - setup_bednet_access
+  - setup_bednet_access.none
+  - Bed_Net_Access
+  - Bed_Net_Access.none
+- subtitle: Bed Net Usage
+  desc: |
+    Specialized methods to model bed net ownership
+  contents:
+  - setup_bednet_use
+  - setup_bednet_use.none
+  - Use_Bed_Net
+  - Use_Bed_Net.none
+- subtitle: Bed Net Effects
+  desc: |
+    Specialized methods to model bed net effects
+  contents:
+  - setup_bednet_effects
+  - setup_bednet_effects.none
+  - Bed_Net_Effects
+  - Bed_Net_Effects.none
+- subtitle: Bed Net Coverage
+  desc: |
+    Specialized methods to model bed net coverage
+  contents:
+  - setup_bednet_coverage
+  - setup_bednet_coverage.none
+  - setup_bednet_coverage.func
+  - make_bednet_coverage_function
+  - Bed_Net_Coverage
+  - Bed_Net_Coverage.none
+  - Bed_Net_Coverage.func
+  - get_bednet_coverage
+  - change_bednet_coverage
+  - show_bednet_coverage
+- subtitle: Bed Net Contact
+  desc: |
+    Specialized methods to model bed net contact
+  contents:
+  - setup_bednet_contact
+  - setup_bednet_contact.none
+  - Bed_Net_Contact
+  - Bed_Net_Contact.none
+  - setup_bednet_contact.linear
+  - Bed_Net_Contact.linear
+  - get_bednet_contact
+  - change_bednet_contact
+  - show_bednet_contact
+  - Bed_Net_Contact.multiround
+  - setup_bednet_contact.multiround
+  - add_bednet_events
+- subtitle: Bed Net Multiround Coverage
+  desc: |
+    Specialized methods to model bed net multiround coverage
+  contents:
+  - setup_bednet_coverage.multiround
+  - Bed_Net_Coverage.multiround
+  - change_bednet_contact_multiround
+  - change_bednet_coverage_multiround
+  - make_bednet_round
+  - get_bednet_contact
+  - setup_bednet_events
+  - show_bednet_events
+  - show_events
+- subtitle: Bed Net Effect Sizes
+  desc: |
+    Specialized methods to model bed net effect sizes
+  contents:
+  - setup_bednet_effect_sizes
+  - setup_bednet_effect_sizes.none
+  - Bed_Net_Effect_Sizes
+  - Bed_Net_Effect_Sizes.none
+  - setup_bednet_effect_sizes.lemenach
+  - make_bednet_effect_sizes_lemenach
+  - Bed_Net_Effect_Sizes.lemenach
+  - compute_bednet_effect_sizes_lemenach
+- title: IRS
+  desc: |
+    Specialized methods to implement IRS
+  contents:
+  - setup_irs_object
+  - setup_irs
+  - IRS_1
+  - IRS_1.none
+  - IRS_1.static
+  - IRS_1.dynamic
+  - IRS_2
+  - IRS_2.none
+  - IRS_2.static
+  - IRS_2.dynamic
+- subtitle: Spray Houses
+  desc: |
+    Specialized methods to model house spraying
+  contents:
+  - setup_spray_houses
+  - setup_spray_houses.none
+  - SprayHouses
+  - SprayHouses.none
+- subtitle: IRS Effects
+  desc: |
+    Specialized methods to model IRS effects
+  contents:
+  - setup_irs_effects
+  - setup_irs_effects.none
+  - IRS_Effects
+  - IRS_Effects.none
+- subtitle: IRS Effect Sizes
+  desc: |
+    Specialized methods to model IRS effect sizes
+  contents:
+  - setup_irs_effect_sizes
+  - setup_irs_effect_sizes.none
+  - IRS_Effect_Sizes
+  - IRS_Effect_Sizes.none
+  - setup_irs_effect_sizes.simple
+  - make_irs_effect_sizes_simple
+  - IRS_Effect_Sizes.simple
+  - compute_irs_effect_sizes_simple
+- subtitle: IRS Coverage
+  desc: |
+    Specialized methods to model IRS coverage
+  contents:
+  - setup_irs_coverage
+  - setup_irs_coverage.none
+  - setup_irs_coverage.func
+  - make_irs_coverage_func
+  - IRS_Coverage
+  - IRS_Coverage.none
+  - IRS_Coverage.func
+  - get_irs_coverage
+  - show_irs_coverage
+  - setup_irs_events
+  - show_irs_events
+- subtitle: IRS Contact
+  desc: |
+    Specialized methods to model IRS contact
+  contents:
+  - setup_irs_contact
+  - setup_irs_contact.none
+  - setup_irs_contact.func
+  - setup_irs_contact.linear
+  - IRS_Contact.linear
+  - make_irs_contact_func
+  - IRS_Contact
+  - IRS_Contact.none
+  - IRS_Contact.func
+  - get_irs_contact
+  - show_irs_contact
+  - setup_irs_events
+  - show_irs_events
+  - IRS_Contact.multiround
+  - add_irs_events
+  - setup_irs_contact.multiround
+  - change_irs_contact
+  - change_irs_contact_multiround
+  - change_irs_coverage_multiround
+  - change_irs_coverage
+- subtitle: IRS Pesticides
+  desc: |
+    Profiles for common IRS pesticides
+  contents:
+  - make_irs_round
+- subtitle: IRS Multiround Coverage
+  desc: |
+    Specialized methods to model IRS multiround coverage
+  contents:
+  - setup_irs_coverage.multiround
+  - IRS_Coverage.multiround
+- title: LSM
+  desc: |
+    Specialized methods to model LSM
+  contents:
+  - setup_lsm_object
+- title: Sugar Baits
+  desc: |
+    Specialized methods to model Sugar Baits
+  contents:
+  - setup_atsb_object
+- title: Area Spraying
+  desc: |
+    Specialized methods to model area spraying
+  contents:
+  - setup_area_spray_object
+- title: Utilities
+  desc: |
+    Useful Functions
+  contents:
+  - make_none_object
+  - makepar_F_multiround
+  - get_events
+  - get_events.bednet
+  - get_events.irs
+  - irs_profiles
+  - change_irs_shock_multiround
+  - make_irs_efsz_profile
+  - make_irs_killing_profile
+  - make_irs_shock
+  - show_irs_shock
+  - show_irs_profile
+  - show_irs_response_timeline
+  - make_bednet_efsz_profile
+  - make_bednet_shock
+  - change_bednet_shock_multiround
+  - show_bednet_response_timeline
+  - show_bednet_shock
+  - makepar_F_multishock
+  - make_bednet_profile
+  - show_bednet_profile
+  - setup_F_contact_bednet_multiround
+  - setup_F_contact_irs_multiround
+  - setup_F_coverage_bednet_multiround
+  - setup_F_coverage_irs_multiround
+  - setup_F_multishock
+  - setup_bednet_rounds
+  - setup_bednet_shock_multiround
+  - setup_irs_rounds
