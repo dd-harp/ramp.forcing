@@ -9,11 +9,11 @@
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-Implements [OtherBloodHosts] for the static model of other_blood_hosts (do nothing)
+Implements \link{OtherBloodHosts} for the static model of other_blood_hosts (do nothing)
 }

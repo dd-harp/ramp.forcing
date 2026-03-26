@@ -75,7 +75,10 @@ sis_si_eir_2 <- xds_solve(sis_si_eir_2, 5*365, 5)
 xds_plot_EIR(sis_si_eir_2) -> eir2
 get_EIR(sis_si_eir_1) -> eir1
 xds_plot_PR(sis_si_eir_2)  -> pr2
+get_PR(sis_si_eir_2) -> pr2 
+pr2 <- pr2$pr
 get_PR(sis_si_eir_1) -> pr1 
+pr1 <- pr1$pr
 ```
 Now, the effect is modulated by the seasonal pattern. Here we show the effects on EIR and PR as ratios and differences. 
 

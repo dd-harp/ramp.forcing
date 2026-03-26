@@ -9,11 +9,11 @@ OviTraps(t, pars)
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-This method dispatches on the type of `pars$ovitraps`.
+This method dispatches on the type of \code{pars$ovitraps}.
 }

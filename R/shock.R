@@ -7,7 +7,7 @@
 #' @return an **`xds`** object
 #' @export
 Shock <- function(t, xds_obj) {
-  UseMethod("Shock", xds_obj$forcing$shock)
+  UseMethod("Shock", xds_obj$shock)
 }
 
 #' @title Set no shock
@@ -26,7 +26,7 @@ Shock.none <- function(t, xds_obj) {
 setup_no_shock <- function(xds_obj) {
   shock <- 'none'
   class(shock) <- 'none'
-  xds_obj$forcing$shock <- shock
+  xds_obj$shock <- shock
   return(xds_obj)
 }
 
@@ -80,6 +80,7 @@ setup_shock_func = function(xds_obj, opts=list(), eventT=365, F_shock=NULL){
   class(shock) <- 'func'
   shock$eventT = eventT
   shock$F_shock = F_shock
+  xds_obj$shock <- shock
   return(xds_obj)
 }
 

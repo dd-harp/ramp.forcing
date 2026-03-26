@@ -7,10 +7,10 @@
 setup_no_ovitraps(pars)
 }
 \arguments{
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Set up the none model for oviposition traps (do nothing)

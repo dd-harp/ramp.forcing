@@ -5,7 +5,7 @@
 \title{Make parameters and functions for the basic model for visitors}
 \usage{
 setup_visitors_basic(
-  pars,
+  xds_obj,
   IMopts,
   x_scale = 0,
   xt = NULL,
@@ -14,9 +14,9 @@ setup_visitors_basic(
 )
 }
 \arguments{
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 
-\item{IMopts}{a [list]}
+\item{IMopts}{a \link{list}}
 
 \item{x_scale}{a non-negative numeric value to set the mean for x_visitors}
 
@@ -27,7 +27,7 @@ setup_visitors_basic(
 \item{Vt}{a function to set the temporal pattern for availability of Visiting}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Make parameters and functions for the basic model for visitors

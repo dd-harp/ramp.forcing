@@ -7,10 +7,10 @@
 dynamic_forcing(pars)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not

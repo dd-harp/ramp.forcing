@@ -9,7 +9,7 @@
 \arguments{
 \item{Hname}{the name of a model to set up}
 
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{setup_no_forcing}{a list of options to override defaults}
 }

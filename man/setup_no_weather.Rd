@@ -7,10 +7,10 @@
 setup_no_weather(xds_obj)
 }
 \arguments{
-\item{xds_obj}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Set up the no_forcing model for weather

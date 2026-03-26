@@ -25,7 +25,7 @@ Weather.none <- function(t, xds_obj) {
 setup_no_weather <- function(xds_obj) {
   weather <- 'none'
   class(weather) <- 'none'
-  xds_obj$forcing$weather <- weather
+  xds_obj$weather <- weather
   return(xds_obj)
 }
 

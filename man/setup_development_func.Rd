@@ -13,7 +13,7 @@ setup_development_func(
 )
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 
@@ -24,7 +24,7 @@ setup_development_func(
 \item{F_trend}{a temporal trend in development}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not

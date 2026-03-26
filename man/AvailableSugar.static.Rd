@@ -7,10 +7,10 @@
 \method{AvailableSugar}{static}(pars)
 }
 \arguments{
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-a [numeric] vector of length `nPatches`
+a \link{numeric} vector of length \code{nPatches}
 }
 \description{
 Computes the availability of sugar for the static model (do nothing)

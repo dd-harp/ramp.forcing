@@ -10,7 +10,7 @@ setup_habitat_dynamics_static(pars)
 \item{pars}{the model object}
 }
 \value{
-a [list] vector
+a \link{list} vector
 }
 \description{
 Sets up the egg-deposition matrix calU for the s^th species

@@ -13,7 +13,7 @@ setup_hydrology_func(
 )
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{setup_no_forcing}{a list of options to override defaults}
 
@@ -24,7 +24,7 @@ setup_hydrology_func(
 \item{F_trend}{a temporal trend in hydrology}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not

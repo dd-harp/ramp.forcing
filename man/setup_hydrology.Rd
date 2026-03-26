@@ -9,12 +9,12 @@ setup_hydrology(Hname, pars, setup_no_forcing = list())
 \arguments{
 \item{Hname}{the name of a model to set up}
 
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{setup_no_forcing}{a list of options to override defaults}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not

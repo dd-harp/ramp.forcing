@@ -7,11 +7,11 @@
 AvailableSugar(pars)
 }
 \arguments{
-\item{pars}{an [list]}
+\item{pars}{an \link{list}}
 }
 \value{
-a [list]
+a \link{list}
 }
 \description{
-This method dispatches on the type of `pars$SUGAR`.
+This method dispatches on the type of \code{pars$SUGAR}.
 }

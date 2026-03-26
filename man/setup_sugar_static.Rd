@@ -4,15 +4,15 @@
 \alias{setup_sugar_static}
 \title{Make parameters for the static model for sugar (do nothing)}
 \usage{
-setup_sugar_static(pars, Sugar = 0)
+setup_sugar_static(xds_obj, Sugar = 0)
 }
 \arguments{
-\item{pars}{a [list]}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Sugar}{describes sugar availability}
 }
 \value{
-[list]
+an \strong{\code{xds}} object
 }
 \description{
 Make parameters for the static model for sugar (do nothing)

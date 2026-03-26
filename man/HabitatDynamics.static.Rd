@@ -9,11 +9,11 @@
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-Implements [HabitatDynamics] for the static model of habitat_dynamics (do nothing)
+Implements \link{HabitatDynamics} for the static model of habitat_dynamics (do nothing)
 }

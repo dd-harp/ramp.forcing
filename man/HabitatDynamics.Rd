@@ -9,11 +9,11 @@ HabitatDynamics(t, pars)
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-Set the values of habitat search weights and other exogenous variables describing habitat_dynamics. This method dispatches on the type of `pars$HABITAT_DYNAMICS`.
+Set the values of habitat search weights and other exogenous variables describing habitat_dynamics. This method dispatches on the type of \code{pars$HABITAT_DYNAMICS}.
 }

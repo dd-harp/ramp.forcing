@@ -7,12 +7,12 @@
 setup_other_blood_hosts_static(pars, Other = 0)
 }
 \arguments{
-\item{pars}{a [list]}
+\item{pars}{a \link{list}}
 
 \item{Other}{the availability of other blood hosts}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Make parameters for the static model for other blood hosts (do nothing)

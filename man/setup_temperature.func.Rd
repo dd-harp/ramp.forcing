@@ -9,7 +9,7 @@
 \arguments{
 \item{Tname}{the name of a model to set up}
 
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }

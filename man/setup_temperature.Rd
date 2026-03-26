@@ -9,12 +9,12 @@ setup_temperature(Tname, pars, Topts = list())
 \arguments{
 \item{Tname}{the name of a model to set up}
 
-\item{pars}{an **`xds`** object}
+\item{pars}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not

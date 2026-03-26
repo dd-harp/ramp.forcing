@@ -3,12 +3,12 @@
 #' @description Set the value of exogenous variables related to
 #' temperature
 #' @param t current simulation time
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @noRd
 #' @export
-Temperature <- function(t, pars) {
-  UseMethod("Temperature", pars$temperature)
+Temperature <- function(t, xds_obj) {
+  UseMethod("Temperature", xds_obj$temperature)
 }
 
 #' @title Set no temperature
@@ -17,20 +17,20 @@ Temperature <- function(t, pars) {
 #' @return [list]
 #' @noRd
 #' @export
-Temperature.none <- function(t, pars) {
-  return(pars)
+Temperature.none <- function(t, xds_obj) {
+  return(xds_obj)
 }
 
 #' @title Set up "no temperature"
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @noRd
 #' @export
-setup_no_temperature <- function(pars) {
+setup_no_temperature <- function(xds_obj) {
   temperature <- 'none'
   class(temperature) <- 'none'
-  pars$temperature <- temperature
-  return(pars)
+  xds_obj$temperature <- temperature
+  return(xds_obj)
 }
 
 #' @title Set up dynamic forcing
@@ -38,11 +38,11 @@ setup_no_temperature <- function(pars) {
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @param Tname the name of a model to set up
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
 #' @param Topts a list of options to override defaults
 #' @return an **`xds`** object
 #' @export
-setup_temperature = function(Tname, pars, Topts=list()){
+setup_temperature = function(Tname, xds_obj, Topts=list()){
   class(Tname) <- Tname
   UseMethod("setup_temperature", Tname)
 }
@@ -53,8 +53,8 @@ setup_temperature = function(Tname, pars, Topts=list()){
 #' @return [list]
 #' @noRd
 #' @export
-Temperature.func <- function(t, pars) {with(pars$temperature,{
-  pars$vars$Temperature = meanT*F_season(t)*F_trend(t)
+Temperature.func <- function(t, xds_obj) {with(xds_obj$temperature,{
+  xds_obj$vars$Temperature = meanT*F_season(t)*F_trend(t)
 })}
 
 #' @title Set up dynamic forcing
@@ -63,29 +63,29 @@ Temperature.func <- function(t, pars) {with(pars$temperature,{
 #' forcing and set all the
 #' @inheritParams setup_temperature
 #' @export
-setup_temperature.func = function(Tname, pars, Topts=list()){
-  pars <- dynamic_weather(pars)
-  pars = setup_temperature_func(pars, Topts())
+setup_temperature.func = function(Tname, xds_obj, Topts=list()){
+  xds_obj <- dynamic_weather(xds_obj)
+  xds_obj = setup_temperature_func(xds_obj, Topts())
 }
 
 #' @title Set up dynamic forcing
 #' @description If dynamic forcing has not
 #' already been set up, then turn on dynamic
 #' forcing and set all the
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
 #' @param Topts a list of options to override defaults
 #' @param meanT the mean temperature
 #' @param F_season the seasonal signal in temperature
 #' @param F_trend a temporal trend in temperature
 #' @return an **`xds`** object
 #' @export
-setup_temperature_func = function(pars, Topts=list(), meanT=30, F_season=F_flat, F_trend=F_flat){
+setup_temperature_func = function(xds_obj, Topts=list(), meanT=30, F_season=F_flat, F_trend=F_flat){
    temperature <- list()
    class(temperature) <- 'func'
    temperature$meanT <- meanT
    temperature$F_season <- F_season
    temperature$F_trend <- F_trend
-   pars$temperature <- temperature
-   return(pars)
+   xds_obj$temperature <- temperature
+   return(xds_obj)
 }
 
