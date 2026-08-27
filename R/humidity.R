@@ -72,9 +72,10 @@ setup_humidity.func = function(name, xds_obj, Topts=list()){
 #' @param mean the mean humidity
 #' @param F_season the seasonal signal in humidity
 #' @param F_trend a temporal trend in humidity
+#' @importFrom ramp.xds F_one
 #' @return an **`xds`** object
 #' @export
-setup_humidity_func = function(xds_obj, Topts=list(), mean = 80, F_season=F_flat, F_trend=F_flat){
+setup_humidity_func = function(xds_obj, Topts=list(), mean = 80, F_season=F_one, F_trend=F_one){
   humidity <- list()
   class(humidity) <- 'func'
   humidity$meanT <- mean

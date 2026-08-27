@@ -1,14 +1,18 @@
 ## -----------------------------------------------------------------------------
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
+
+## -----------------------------------------------------------------------------
+#devtools::load_all()
 
 ## -----------------------------------------------------------------------------
 skill_set_XH("SIS")$mda
 
 ## -----------------------------------------------------------------------------
 base_model <- xds_setup_eir(Xname = "SIS", 
-                       eir=1/365, 
-                       season_par = makepar_F_sin(phase=120))
+                       eir=1/365)
+base_model <- change_season(makepar_F_sin(phase=120), base_model)
 
 ## ----fig.height=4, fig.width=7------------------------------------------------
 base_model <- burnin(base_model) 

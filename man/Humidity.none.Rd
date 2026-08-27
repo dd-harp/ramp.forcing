@@ -4,12 +4,12 @@
 \alias{Humidity.none}
 \title{Set no humidity}
 \usage{
-\method{Humidity}{none}(t, pars)
+\method{Humidity}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 \link{list}

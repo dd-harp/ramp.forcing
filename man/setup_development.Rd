@@ -4,12 +4,12 @@
 \alias{setup_development}
 \title{Set up dynamic forcing}
 \usage{
-setup_development(name, pars, Topts = list())
+setup_development(name, xds_obj, Topts = list())
 }
 \arguments{
 \item{name}{the name of a model to set up}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }
@@ -21,3 +21,4 @@ If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

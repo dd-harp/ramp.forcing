@@ -10,7 +10,7 @@ setup_F_coverage_bednet_multiround(xds_obj)
 \item{xds_obj}{a \strong{\code{ramp.xds}}  model object}
 }
 \value{
-set up the rounds
+an \strong{\code{xds}} model object
 }
 \description{
 Set up the bednet rounds

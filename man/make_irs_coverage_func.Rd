@@ -7,9 +7,9 @@
 make_irs_coverage_func(
   options = list(),
   mean = 1,
-  F_season = F_flat,
+  F_season = F_one,
   season_par = list(),
-  F_trend = F_flat,
+  F_trend = F_one,
   trend_par = list()
 )
 }

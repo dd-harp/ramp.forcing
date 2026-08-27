@@ -4,12 +4,12 @@
 \alias{Rainfall.none}
 \title{Set no rainfall}
 \usage{
-\method{Rainfall}{none}(t, pars)
+\method{Rainfall}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 \link{list}

@@ -305,7 +305,7 @@ Ln = list(Lambda=Lambda)
 
 cov_opts <- list()
 cov_opts$mean = 0.7
-cov_opts$F_season = F_flat
+cov_opts$F_season = F_one
 
 es <- with(MYZo,
           sapply(1:nPatches, compute_bednet_effect_sizes_lemenach, phi=0.7,

@@ -45,7 +45,8 @@ A bed net profile is a function that models bed net effective coverage (access t
 
 ```{r}
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 #devtools::load_all()
 ```
 

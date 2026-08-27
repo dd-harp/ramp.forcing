@@ -4,12 +4,12 @@
 \alias{Forcing.setup}
 \title{The \code{setup} case for exogenous forcing}
 \usage{
-\method{Forcing}{setup}(t, pars)
+\method{Forcing}{setup}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 an \strong{\code{xds}} object

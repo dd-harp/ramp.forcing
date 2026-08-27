@@ -63,6 +63,8 @@ change_irs_contact_multiround = function(xds_obj, contact){
 #'
 #' @return set up the rounds
 #'
+#' @importFrom ramp.func make_function
+#'
 #' @export
 setup_F_contact_irs_multiround = function(xds_obj){
   xds_obj <- setup_irs_rounds(xds_obj, xds_obj$events_obj$irs$contact)

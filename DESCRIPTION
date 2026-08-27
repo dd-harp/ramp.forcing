@@ -15,12 +15,15 @@ Encoding: UTF-8
 LazyData: true
 URL: https://dd-harp.github.io/ramp.forcing
 BugReports: https://github.com/dd-harp/ramp.forcing/issues
-Remotes: github::dd-harp/ramp.xds
+Remotes: 
+  github::dd-harp/ramp.xds, 
+  github::dd-harp/ramp.func 
 RdMacros: Rdpack
 Roxygen: list(markdown = TRUE)
 Depends:
     R (>= 3.5),
-    ramp.xds
+    ramp.xds,
+    ramp.func
 Imports:
   Rdpack
 Suggests:

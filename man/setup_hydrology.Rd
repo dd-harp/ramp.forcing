@@ -4,12 +4,12 @@
 \alias{setup_hydrology}
 \title{Set up dynamic forcing}
 \usage{
-setup_hydrology(Hname, pars, setup_no_forcing = list())
+setup_hydrology(Hname, xds_obj, setup_no_forcing = list())
 }
 \arguments{
 \item{Hname}{the name of a model to set up}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{setup_no_forcing}{a list of options to override defaults}
 }

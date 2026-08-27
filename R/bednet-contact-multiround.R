@@ -58,6 +58,8 @@ change_bednet_contact_multiround = function(xds_obj, contact){
 #'
 #' @return set up the rounds
 #'
+#' @importFrom ramp.func make_function
+#'
 #' @export
 setup_F_contact_bednet_multiround = function(xds_obj){
   xds_obj <- setup_bednet_rounds(xds_obj, xds_obj$events_obj$bednet$contact)

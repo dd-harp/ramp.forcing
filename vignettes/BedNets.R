@@ -1,27 +1,34 @@
 ## -----------------------------------------------------------------------------
 library(ramp.xds)
+library(ramp.forcing)
+library(ramp.func)
+
+## ----echo=F-------------------------------------------------------------------
+#devtools::load_all()
 
 ## -----------------------------------------------------------------------------
-mod <- xds_setup(MYZname = "SI")
+mod <- xds_setup(MYname = "SI")
+
+## -----------------------------------------------------------------------------
+mod <- setup_vector_control(mod)
+mod <- xds_solve(mod)
 
 ## -----------------------------------------------------------------------------
 cov_opts <- list(
-  mean = 0.5, 
   F_season = function(t)
     {ifelse(t < 0, 0, (sin(2*pi*(t-365/4) / 365) + 1))}
 )
 
 ## -----------------------------------------------------------------------------
 tt = seq(0:730)
-with(cov_opts, plot(tt, mean*F_season(tt), type = "l"))
+with(cov_opts, plot(tt, F_season(tt), type = "l"))
 
 ## -----------------------------------------------------------------------------
-mod <- xds_setup_bednets(mod,
+mod <- setup_bednets(mod,
      coverage_name = "func", coverage_opts = cov_opts, 
-     effectsizes_name = "lemenach")
-
+     effect_sizes_name = "lemenach")
 
 ## -----------------------------------------------------------------------------
 tt = seq(0:730)
-with(mod$bednets$coverage, plot(tt, mean*F_season(tt), type = "l"))
+show_bednet_coverage(tt, mod)
 

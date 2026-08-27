@@ -9,7 +9,8 @@ vignette: >
 ---
 
 ```{r}
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 ```
 
 ```{r, echo=F}

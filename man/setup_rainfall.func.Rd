@@ -4,12 +4,12 @@
 \alias{setup_rainfall.func}
 \title{Set up dynamic forcing}
 \usage{
-\method{setup_rainfall}{func}(Tname, pars, Topts = list())
+\method{setup_rainfall}{func}(Tname, xds_obj, Topts = list())
 }
 \arguments{
 \item{Tname}{the name of a model to set up}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }

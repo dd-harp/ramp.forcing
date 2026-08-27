@@ -4,12 +4,12 @@
 \alias{Hydrology.func}
 \title{Set no hydrology}
 \usage{
-\method{Hydrology}{func}(t, pars)
+\method{Hydrology}{func}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 \link{list}

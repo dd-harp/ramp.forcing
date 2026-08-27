@@ -28,6 +28,8 @@ setup_irs_coverage.multiround = function(name, xds_obj, options=list()){
 #'
 #' @return set up the rounds
 #'
+#' @importFrom ramp.func make_function
+#'
 #' @export
 setup_F_coverage_irs_multiround = function(xds_obj){
   xds_obj <- setup_irs_rounds(xds_obj, xds_obj$events_obj$irs$coverage)

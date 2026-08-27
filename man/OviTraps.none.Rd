@@ -4,12 +4,12 @@
 \alias{OviTraps.none}
 \title{Methods for oviposition traps}
 \usage{
-\method{OviTraps}{none}(t, pars)
+\method{OviTraps}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a \link{list}}
+\item{xds_obj}{a \link{list}}
 }
 \value{
 \link{list}

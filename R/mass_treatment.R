@@ -66,6 +66,7 @@ make_mass_treat_multiround = function(xds_obj, screen){
 #' forcing and set all the
 #' @param treat a list with parameters for all the rounds
 #' @return a **`xds`** object
+#' @importFrom ramp.func make_function
 #' @export
 make_F_mass_treat = function(treat){with(treat,{
   rounds <- list()

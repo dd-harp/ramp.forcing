@@ -1,6 +1,7 @@
 ## -----------------------------------------------------------------------------
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 #devtools::load_all()
 
 ## ----fig.width=7, fig.height=4.5----------------------------------------------

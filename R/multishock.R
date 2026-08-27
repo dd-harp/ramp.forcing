@@ -26,6 +26,8 @@ makepar_F_multishock = function(nRounds, rounds){
 #'
 #' @param xds_obj a **`ramp.xds`**  model object
 #'
+#' @importFrom ramp.func make_function
+#'
 #' @return set up the rounds
 #'
 #' @export

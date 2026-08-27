@@ -98,6 +98,8 @@ make_irs_efsz_profile = function(d_50, d_shape, start_day, peak, elength=20, pw=
 #'
 #' @param irs_type the name of the IRS type
 #'
+#' @importFrom ramp.func make_function
+#'
 #' @return a **`xds`** object
 #' @export
 show_irs_profile = function(irs_type){
@@ -116,6 +118,8 @@ show_irs_profile = function(irs_type){
 #' a single round of IRS.
 #'
 #' @param irs_type the name of the IRS type
+#'
+#' @importFrom ramp.func make_function
 #'
 #' @return a **`xds`** object
 #' @export

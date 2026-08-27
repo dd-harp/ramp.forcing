@@ -4,10 +4,10 @@
 \alias{setup_no_ovitraps}
 \title{Set up the none model for oviposition traps (do nothing)}
 \usage{
-setup_no_ovitraps(pars)
+setup_no_ovitraps(xds_obj)
 }
 \arguments{
-\item{pars}{a \link{list}}
+\item{xds_obj}{a \link{list}}
 }
 \value{
 \link{list}

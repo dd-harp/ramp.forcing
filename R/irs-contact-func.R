@@ -26,13 +26,16 @@ setup_irs_contact.func = function(name="func", xds_obj, options=list()){
 #' @param F_trend a temporal trend in irs contact
 #' @param trend_par parameters to configure F_trend
 #'
+#' @importFrom ramp.xds F_one
+#' @importFrom ramp.func make_function
+#'
 #' @return a **`ramp.xds`** model object
 #' @export
 make_irs_contact_func = function(options=list(),
                                   mean=1,
-                                  F_season=F_flat,
+                                  F_season=F_one,
                                   season_par=list(),
-                                  F_trend=F_flat,
+                                  F_trend=F_one,
                                   trend_par=list()){
   with(options,{
     contact <- list()

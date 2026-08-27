@@ -4,12 +4,12 @@
 \alias{setup_temperature.func}
 \title{Set up dynamic forcing}
 \usage{
-\method{setup_temperature}{func}(Tname, pars, Topts = list())
+\method{setup_temperature}{func}(Tname, xds_obj, Topts = list())
 }
 \arguments{
 \item{Tname}{the name of a model to set up}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }
@@ -18,3 +18,4 @@ If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

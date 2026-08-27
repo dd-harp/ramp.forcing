@@ -72,9 +72,10 @@ setup_rainfall.func = function(Tname, xds_obj, Topts=list()){
 #' @param mean the mean rainfall
 #' @param F_season the seasonal signal in rainfall
 #' @param F_trend a temporal trend in rainfall
+#' @importFrom ramp.xds F_one
 #' @return an **`xds`** object
 #' @export
-setup_rainfall_func = function(xds_obj, Topts=list(), mean=30, F_season=F_flat, F_trend=F_flat){
+setup_rainfall_func = function(xds_obj, Topts=list(), mean=30, F_season=F_one, F_trend=F_one){
   rainfall <- list()
   class(rainfall) <- 'func'
   rainfall$meanT <- mean

@@ -14,7 +14,7 @@
 \item{xds_obj}{a \strong{\code{ramp.xds}} model object}
 }
 \value{
-a \strong{\code{xds}} object
+an \strong{\code{xds}} model object
 }
 \description{
 The null model for bednet_coverage

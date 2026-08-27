@@ -4,10 +4,10 @@
 \alias{setup_no_hydrology}
 \title{Set up "no hydrology"}
 \usage{
-setup_no_hydrology(pars)
+setup_no_hydrology(xds_obj)
 }
 \arguments{
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 an \strong{\code{xds}} object

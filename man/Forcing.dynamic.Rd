@@ -4,12 +4,12 @@
 \alias{Forcing.dynamic}
 \title{Set the values of exogenous variables}
 \usage{
-\method{Forcing}{dynamic}(t, pars)
+\method{Forcing}{dynamic}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 an \strong{\code{xds}} object

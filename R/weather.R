@@ -4,8 +4,9 @@
 #' @description This method dispatches on the type of `xds_obj$weather`.
 #' @param t current simulation time
 #' @param xds_obj a [list]
-#' @noRd
+#' @keywords internal
 #' @return [list]
+#' @export
 Weather <- function(t, xds_obj) {
   UseMethod("Weather", xds_obj$weather)
 }
@@ -13,8 +14,9 @@ Weather <- function(t, xds_obj) {
 #' @title Methods for exogenous variables describing weather
 #' @description Implements a null weather model
 #' @inheritParams Weather
-#' @noRd
+#' @keywords internal
 #' @return [list]
+#' @export
 Weather.none <- function(t, xds_obj) {
   return(xds_obj)
 }
@@ -22,6 +24,7 @@ Weather.none <- function(t, xds_obj) {
 #' @title Set up the no_forcing model for weather
 #' @param xds_obj a [list]
 #' @return [list]
+#' @export
 setup_no_weather <- function(xds_obj) {
   weather <- 'none'
   class(weather) <- 'none'
@@ -34,8 +37,9 @@ setup_no_weather <- function(xds_obj) {
 #' already been set up, then turn on dynamic
 #' weather and set up all its null models
 #' @param xds_obj an **`xds`** object
-#' @noRd
 #' @return an **`xds`** object
+#' @keywords internal
+#' @export
 dynamic_weather = function(xds_obj){
   UseMethod("dynamic_weather", xds_obj$weather)
 }
@@ -45,8 +49,9 @@ dynamic_weather = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' weather and set all the
 #' @param xds_obj an **`xds`** object
-#' @noRd
+#' @keywords internal
 #' @return an **`xds`** object
+#' @export
 dynamic_weather.none = function(xds_obj){
   # turn on dynamic forcing
   xds_obj <- dynamic_forcing(xds_obj)
@@ -64,8 +69,9 @@ dynamic_weather.none = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' weather and set all the
 #' @param xds_obj an **`xds`** object
-#' @noRd
+#' @keywords internal
 #' @return an **`xds`** object
+#' @export
 dynamic_weather.setup = function(xds_obj){
   return(xds_obj)
 }
@@ -75,8 +81,9 @@ dynamic_weather.setup = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' weather and set all the
 #' @param xds_obj an **`xds`** object
-#' @noRd
 #' @return an **`xds`** object
+#' @keywords internal
+#' @export
 dynamic_weather.dynamic = function(xds_obj){
   return(xds_obj)
 }
@@ -84,8 +91,9 @@ dynamic_weather.dynamic = function(xds_obj){
 #' @title Methods for exogenous variables describing weather
 #' @description Implements exogenous forcing by [Weather]
 #' @inheritParams Weather
-#' @noRd
-#' @return [list]
+#' @return an **`xds`** object
+#' @keywords internal
+#' @export
 Weather.dynamic <- function(t, xds_obj) {
   xds_obj = Temperature(t, xds_obj)
   xds_obj = Rainfall(t, xds_obj)

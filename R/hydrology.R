@@ -74,8 +74,9 @@ setup_hydrology.func = function(Hname, xds_obj, setup_no_forcing=list()){
 #' @param F_season the seasonal signal in hydrology
 #' @param F_trend a temporal trend in hydrology
 #' @return an **`xds`** object
+#' @importFrom ramp.xds F_one
 #' @export
-setup_hydrology_func = function(xds_obj, setup_no_forcing=list(), mean=30, F_season=F_flat, F_trend=F_flat){
+setup_hydrology_func = function(xds_obj, setup_no_forcing=list(), mean=30, F_season=F_one, F_trend=F_one){
   hydrology <- list()
   class(hydrology) <- 'func'
   hydrology$mean <- mean

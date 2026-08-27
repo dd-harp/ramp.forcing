@@ -5,15 +5,15 @@
 \title{Set up dynamic forcing}
 \usage{
 setup_development_func(
-  pars,
+  xds_obj,
   Topts = list(),
   mean = 30,
-  F_season = F_flat,
-  F_trend = F_flat
+  F_season = F_one,
+  F_trend = F_one
 )
 }
 \arguments{
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 
@@ -31,3 +31,4 @@ If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

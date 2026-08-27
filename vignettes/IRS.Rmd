@@ -10,7 +10,8 @@ vignette: >
 
 ```{r}
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 library(MASS)
 library(deSolve)
 library(viridisLite)
@@ -79,6 +80,9 @@ segments(40, 0, 40, .9, lty=2, col = grey(0.5))
 segments(60, 0, 60, .9, lty=2, col = grey(0.5))
 points(50, .45, col = grey(0.5))
 points(230, .45, col = grey(0.5))
+```
+```{r}
+#devtools::load_all("~/git/ramp.xds")
 ```
 
 ```{r}

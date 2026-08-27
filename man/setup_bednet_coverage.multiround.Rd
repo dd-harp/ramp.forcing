@@ -13,6 +13,9 @@
 
 \item{options}{a list of options to override defaults}
 }
+\value{
+an \strong{\code{xds}} model object
+}
 \description{
 This sets up a function to set the value of bed net
 coverage

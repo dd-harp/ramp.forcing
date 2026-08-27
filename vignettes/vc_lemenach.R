@@ -1,9 +1,13 @@
 ## ----message=FALSE, warning=FALSE---------------------------------------------
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 library(MASS)
 library(deSolve)
 library(viridisLite)
+
+## -----------------------------------------------------------------------------
+#devtools::load_all()
 
 ## -----------------------------------------------------------------------------
 nPatches <- 3
@@ -66,7 +70,7 @@ beta <- diag(wf) %*% t(TaR) %*% diag(1/as.vector(W), nPatches)
 # kappa
 kappa <- t(beta) %*% (X*c)
 
-Omega <- make_Omega_xde(g, sigma, mu, K_matrix)
+Omega <- compute_Omega_xde(g, sigma, mu, K_matrix)
 Omega_inv <- solve(Omega)
 Upsilon <- expm::expm(-Omega * eip)
 Upsilon_inv <- expm::expm(Omega * eip)
@@ -111,7 +115,7 @@ xds_setup(MYname="SI", Xname="SIS", Lname="basicL",
           nPatches=3, HPop=HPop, membership=membership, 
           MYoptions=MYo, Koptions=K_matrix,
           XHoptions=Xo, residence=1:3, searchB=rep(1,3), 
-          TimeSpent =TaR, searchQ=rep(1,3), Loptions=Lo) -> itn_mod
+          TSoptions =TaR, searchQ=rep(1,3), Loptions=Lo) -> itn_mod
 
 ## -----------------------------------------------------------------------------
 itn_mod <- xds_solve(itn_mod, Tmax=1830, dt=15)
@@ -124,6 +128,8 @@ cov_options <- list(
 )
 
 ## -----------------------------------------------------------------------------
+class(itn_mod$MY_obj[[1]]$Omega_obj) <- "dynamic"
+class(itn_mod$MY_obj[[1]]$Upsilon_obj) <- "dynamic"
 itn_mod <- setup_bednets(itn_mod,
      coverage_name = "func", 
      coverage_opts = cov_options, 

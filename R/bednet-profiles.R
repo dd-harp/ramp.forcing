@@ -100,6 +100,7 @@ make_bednet_efsz_profile = function(d_50, d_shape, start_day, peak, length=20, p
 #' @param add if TRUE, add to an existing plot
 #'
 #' @importFrom graphics lines
+#' @importFrom ramp.func make_function
 #'
 #' @return a **`xds`** object
 #'
@@ -125,6 +126,7 @@ show_bednet_profile = function(d_50, d_shape, clr="black", add=FALSE){
 #' @param add if TRUE, add to an existing plot
 #'
 #' @importFrom graphics lines
+#' @importFrom ramp.func make_function
 #'
 #' @return a **`xds`** object
 #' @export

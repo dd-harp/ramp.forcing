@@ -4,12 +4,12 @@
 \alias{setup_humidity.func}
 \title{Set up dynamic forcing}
 \usage{
-\method{setup_humidity}{func}(name, pars, Topts = list())
+\method{setup_humidity}{func}(name, xds_obj, Topts = list())
 }
 \arguments{
 \item{name}{the name of a model to set up}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 }

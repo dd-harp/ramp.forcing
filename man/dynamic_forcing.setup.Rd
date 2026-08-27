@@ -4,10 +4,10 @@
 \alias{dynamic_forcing.setup}
 \title{Set up dynamic forcing}
 \usage{
-\method{dynamic_forcing}{setup}(pars)
+\method{dynamic_forcing}{setup}(xds_obj)
 }
 \arguments{
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 an \strong{\code{xds}} object

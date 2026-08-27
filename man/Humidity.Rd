@@ -4,12 +4,12 @@
 \alias{Humidity}
 \title{Set the humidity}
 \usage{
-Humidity(t, pars)
+Humidity(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
 an \strong{\code{xds}} object

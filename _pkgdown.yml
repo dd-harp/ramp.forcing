@@ -128,18 +128,9 @@ reference:
   - setup_development_func
 - title: Resource Dynamics
   desc: |
-    Methods to implement resource availability
-  contents:
-  - Resources.setup
-  - Resources.forced
-  - setup_resources_forced
-- subtitle: Other Blood Hosts
-  desc: |
-    Methods to simulate availability of other blood hosts
+    Methods to simulate resource availability
   contents:
   - OtherBloodHosts
-  - OtherBloodHosts.static
-  - setup_other_blood_hosts_static
 - subtitle: Ovitraps
   desc: |
     Methods to simulate ovitraps

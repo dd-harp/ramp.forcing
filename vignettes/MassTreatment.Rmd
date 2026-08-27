@@ -9,7 +9,12 @@ vignette: >
 
 ```{r}
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
+```
+
+```{r}
+#devtools::load_all()
 ```
 
 **`ramp.control`** has utilities to set up and simulate mass treatment, including: 
@@ -34,8 +39,8 @@ The next step is basic setup:
 
 ```{r}
 base_model <- xds_setup_eir(Xname = "SIS", 
-                       eir=1/365, 
-                       season_par = makepar_F_sin(phase=120))
+                       eir=1/365)
+base_model <- change_season(makepar_F_sin(phase=120), base_model)
 ```
 
 Next we solve it. 

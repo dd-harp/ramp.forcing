@@ -4,10 +4,10 @@
 \alias{AvailableSugar.forced}
 \title{Compute total availability of sugar}
 \usage{
-\method{AvailableSugar}{forced}(pars)
+\method{AvailableSugar}{forced}(xds_obj)
 }
 \arguments{
-\item{pars}{a \link{list}}
+\item{xds_obj}{a \link{list}}
 }
 \value{
 a \link{numeric} vector of length \code{nPatches}

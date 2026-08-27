@@ -11,6 +11,9 @@ change_bednet_coverage_multiround(xds_obj, peak_access)
 
 \item{peak_access}{peak access}
 }
+\value{
+an \strong{\code{xds}} model object
+}
 \description{
 With multi-round bed net coverage, there
 is a different relationship between coverage

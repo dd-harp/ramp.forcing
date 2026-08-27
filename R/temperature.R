@@ -5,7 +5,7 @@
 #' @param t current simulation time
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
-#' @noRd
+#' @keywords internal
 #' @export
 Temperature <- function(t, xds_obj) {
   UseMethod("Temperature", xds_obj$temperature)
@@ -15,7 +15,7 @@ Temperature <- function(t, xds_obj) {
 #' @description The null model for temperature
 #' @inheritParams Temperature
 #' @return [list]
-#' @noRd
+#' @keywords internal
 #' @export
 Temperature.none <- function(t, xds_obj) {
   return(xds_obj)
@@ -24,7 +24,7 @@ Temperature.none <- function(t, xds_obj) {
 #' @title Set up "no temperature"
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
-#' @noRd
+#' @keywords internal
 #' @export
 setup_no_temperature <- function(xds_obj) {
   temperature <- 'none'
@@ -51,7 +51,7 @@ setup_temperature = function(Tname, xds_obj, Topts=list()){
 #' @description The null model for temperature
 #' @inheritParams Temperature
 #' @return [list]
-#' @noRd
+#' @keywords internal
 #' @export
 Temperature.func <- function(t, xds_obj) {with(xds_obj$temperature,{
   xds_obj$vars$Temperature = meanT*F_season(t)*F_trend(t)
@@ -62,6 +62,7 @@ Temperature.func <- function(t, xds_obj) {with(xds_obj$temperature,{
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @inheritParams setup_temperature
+#' @keywords internal
 #' @export
 setup_temperature.func = function(Tname, xds_obj, Topts=list()){
   xds_obj <- dynamic_weather(xds_obj)
@@ -78,8 +79,9 @@ setup_temperature.func = function(Tname, xds_obj, Topts=list()){
 #' @param F_season the seasonal signal in temperature
 #' @param F_trend a temporal trend in temperature
 #' @return an **`xds`** object
+#' @importFrom ramp.xds F_one
 #' @export
-setup_temperature_func = function(xds_obj, Topts=list(), meanT=30, F_season=F_flat, F_trend=F_flat){
+setup_temperature_func = function(xds_obj, Topts=list(), meanT=30, F_season=F_one, F_trend=F_one){
    temperature <- list()
    class(temperature) <- 'func'
    temperature$meanT <- meanT

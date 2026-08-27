@@ -7,6 +7,9 @@
 #' coverage
 #'
 #' @inheritParams setup_bednet_coverage
+#'
+#' @return an **`xds`** model object
+#'
 #' @export
 setup_bednet_coverage.multiround = function(name="multiround", xds_obj, options=list()){
   class(xds_obj$vector_control_obj) = "dynamic"
@@ -32,6 +35,8 @@ setup_bednet_coverage.multiround = function(name="multiround", xds_obj, options=
 #' @param xds_obj an **`xds`** model object
 #' @param peak_access peak access
 #'
+#' @return an **`xds`** model object
+#'
 #' @export
 change_bednet_coverage_multiround = function(xds_obj, peak_access){
   stopifnot(with(xds_obj, exists("events_obj")))
@@ -48,7 +53,9 @@ change_bednet_coverage_multiround = function(xds_obj, peak_access){
 #'
 #' @param xds_obj a **`ramp.xds`**  model object
 #'
-#' @return set up the rounds
+#' @return an **`xds`** model object
+#'
+#' @importFrom ramp.func make_function
 #'
 #' @export
 setup_F_coverage_bednet_multiround = function(xds_obj){
@@ -62,7 +69,7 @@ setup_F_coverage_bednet_multiround = function(xds_obj){
 #' @title Set no bednet_coverage
 #' @description The null model for bednet_coverage
 #' @inheritParams Bed_Net_Coverage
-#' @return a **`xds`** object
+#' @return an **`xds`** model object
 #' @export
 Bed_Net_Coverage.multiround <- function(t, y, xds_obj) {
   with(xds_obj$bednet_obj$cover_obj,{

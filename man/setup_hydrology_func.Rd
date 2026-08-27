@@ -5,15 +5,15 @@
 \title{Set up dynamic forcing}
 \usage{
 setup_hydrology_func(
-  pars,
+  xds_obj,
   setup_no_forcing = list(),
   mean = 30,
-  F_season = F_flat,
-  F_trend = F_flat
+  F_season = F_one,
+  F_trend = F_one
 )
 }
 \arguments{
-\item{pars}{an \strong{\code{xds}} object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{setup_no_forcing}{a list of options to override defaults}
 

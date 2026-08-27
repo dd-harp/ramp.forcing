@@ -1,9 +1,13 @@
 ## -----------------------------------------------------------------------------
 library(ramp.xds)
-library(ramp.control)
+library(ramp.forcing)
+library(ramp.func)
 library(MASS)
 library(deSolve)
 library(viridisLite)
+
+## -----------------------------------------------------------------------------
+#devtools::load_all()
 
 ## ----fig.height=9, fig.width=7------------------------------------------------
 tt <- seq(0, 5*365, by=5)
@@ -13,7 +17,8 @@ plot(tt, F1(tt), type = "l", xlab = "Time", ylab = "Effect Size", main = "Respon
 
 ## ----fig.height=9, fig.width=7------------------------------------------------
 par(mfrow = c(2,1))
-sis_si_eir <- xds_setup_eir(Xname = "SIS", shock_par = p1, eir=3/365)
+sis_si_eir <- xds_setup_eir(Xname = "SIS", eir=3/365)
+sis_si_eir <- change_shock(sis_si_eir, shock_par=p1)
 sis_si_eir <- burnin(sis_si_eir) 
 sis_si_eir <- xds_solve(sis_si_eir, 5*365, 5)
 xds_plot_EIR(sis_si_eir) -> eir
@@ -22,8 +27,11 @@ xds_plot_PR(sis_si_eir)  -> pr
 ## ----fig.height=9, fig.width=7------------------------------------------------
 par(mfrow = c(2,1))
 seas0 = makepar_F_sin(bottom = 0.3, pw=2)
-sis_si_eir_1 <- xds_setup_eir(Xname = "SIS", season_par = seas0, eir=3/365)
-sis_si_eir_2 <- xds_setup_eir(Xname = "SIS", season_par = seas0, shock_par = p1, eir=3/365)
+sis_si_eir_1 <- xds_setup_eir(Xname = "SIS", eir=3/365)
+sis_si_eir_1 <- change_season(seas0, sis_si_eir_1)
+sis_si_eir_2 <- xds_setup_eir(Xname = "SIS", eir=3/365)
+sis_si_eir_2 <- change_season(seas0, sis_si_eir_2)
+sis_si_eir_2 <- change_shock(p1, sis_si_eir_2)
 sis_si_eir_1 <- burnin(sis_si_eir_1) 
 sis_si_eir_2 <- burnin(sis_si_eir_2) 
 sis_si_eir_1 <- xds_solve(sis_si_eir_1, 5*365, 5)
