@@ -15,3 +15,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Make a "none" object
 }
+\keyword{internal}

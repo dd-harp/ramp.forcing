@@ -11,6 +11,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_irs_coverage = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_irs_coverage", name)
@@ -26,6 +27,7 @@ setup_irs_coverage = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_irs_coverage.none = function(name, xds_obj, options=list()){
   xds_obj$irs_obj$cover_obj = make_none_object()
   xds_obj$irs_obj$coverage = rep(0, xds_obj$nPatches)
@@ -42,6 +44,7 @@ setup_irs_coverage.none = function(name, xds_obj, options=list()){
 #' @returns a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 get_irs_coverage = function(xds_obj){
   xds_obj$irs_obj$coverage
 }
@@ -57,6 +60,7 @@ get_irs_coverage = function(xds_obj){
 #' @returns maximum irs coverage, as a vector
 #'
 #' @export
+#' @keywords internal
 change_irs_coverage = function(coverage, xds_obj){
   UseMethod("get_irs_coverage", xds_obj$irs_obj$cover_obj)
 }
@@ -71,6 +75,7 @@ change_irs_coverage = function(coverage, xds_obj){
 #'
 #' @returns a **`ramp.xds`** xds_obj object
 #' @export
+#' @keywords internal
 show_irs_coverage = function(tt, xds_obj, clr="black", add=FALSE){
   y <- get_inits(xds_obj, flatten=TRUE)
   xds_obj <- IRS_Coverage(tt, y, xds_obj)
@@ -89,6 +94,7 @@ show_irs_coverage = function(tt, xds_obj, clr="black", add=FALSE){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Coverage <- function(t, y, xds_obj) {
   UseMethod("IRS_Coverage", xds_obj$irs_obj$cover_obj)
 }
@@ -98,6 +104,7 @@ IRS_Coverage <- function(t, y, xds_obj) {
 #' @inheritParams IRS_Coverage
 #' @return [list]
 #' @export
+#' @keywords internal
 IRS_Coverage.none <- function(t, y, xds_obj) {
   return(xds_obj)
 }

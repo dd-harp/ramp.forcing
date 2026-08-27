@@ -10,6 +10,7 @@
 #' @param shock the scaling parameter
 #'
 #' @export
+#' @keywords internal
 change_irs_shock_multiround = function(xds_obj, shock){
   stopifnot(with(xds_obj, exists("events_obj")))
   stopifnot(with(xds_obj$events_obj, exists("irs")))
@@ -31,6 +32,7 @@ change_irs_shock_multiround = function(xds_obj, shock){
 #'
 #' @returns a **`ramp.xds`** xds_obj object
 #' @export
+#' @keywords internal
 show_irs_shock = function(tt, xds_obj, clr="black", add=FALSE){
   xds_obj <- setup_F_multishock(xds_obj)
   if(add==FALSE)

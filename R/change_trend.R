@@ -11,6 +11,7 @@
 #' @return an **`xds`** object
 #'
 #' @export
+#' @keywords internal
 change_trend = function(X, xds_obj, s=1){
   change_spline(X, xds_obj, s)
 }
@@ -27,6 +28,7 @@ change_trend = function(X, xds_obj, s=1){
 #' @return an **`xds`** object
 #'
 #' @export
+#' @keywords internal
 change_spline = function(X, xds_obj, s=1){
   UseMethod("change_spline", xds_obj$forced_by)
 }
@@ -102,6 +104,7 @@ change_spline.eir = function(X, xds_obj, s=1){
 #' @return an **`xds`** object
 #'
 #' @export
+#' @keywords internal
 change_spline_y = function(yy, xds_obj, s=1){
   UseMethod("change_spline_y", xds_obj$forced_by)
 }

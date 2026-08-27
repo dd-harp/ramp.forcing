@@ -18,3 +18,4 @@ an \strong{\code{xds}} model object
 Set up a function that computes
 bednet multi_objage over time.
 }
+\keyword{internal}

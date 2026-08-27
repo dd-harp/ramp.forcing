@@ -20,3 +20,4 @@ a \strong{\code{ramp.xds}} model object
 Set up a linear model
 for contact relative to coverage
 }
+\keyword{internal}

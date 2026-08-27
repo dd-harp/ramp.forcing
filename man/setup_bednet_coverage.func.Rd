@@ -19,3 +19,4 @@ This sets up a function to model bed net coverage.
 \item A function F_cover
 }
 }
+\keyword{internal}

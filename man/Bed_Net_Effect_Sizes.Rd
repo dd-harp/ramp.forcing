@@ -21,3 +21,4 @@ the \strong{\code{xds}} model object
 \description{
 Compute bed net effect sizes
 }
+\keyword{internal}

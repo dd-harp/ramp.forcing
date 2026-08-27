@@ -42,6 +42,7 @@ setup_no_temperature <- function(xds_obj) {
 #' @param Topts a list of options to override defaults
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_temperature = function(Tname, xds_obj, Topts=list()){
   class(Tname) <- Tname
   UseMethod("setup_temperature", Tname)
@@ -81,6 +82,7 @@ setup_temperature.func = function(Tname, xds_obj, Topts=list()){
 #' @return an **`xds`** object
 #' @importFrom ramp.xds F_one
 #' @export
+#' @keywords internal
 setup_temperature_func = function(xds_obj, Topts=list(), meanT=30, F_season=F_one, F_trend=F_one){
    temperature <- list()
    class(temperature) <- 'func'

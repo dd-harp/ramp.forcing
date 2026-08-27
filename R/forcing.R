@@ -5,6 +5,9 @@
 #' the `none` case
 #' @param t current simulation time
 #' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
 Forcing.setup = function(t, xds_obj){
@@ -24,6 +27,9 @@ Forcing.setup = function(t, xds_obj){
 #' @param t current simulation time
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @export
 #' @seealso [dynamic_forcing]
 Forcing.dynamic = function(t, xds_obj){
@@ -39,6 +45,9 @@ Forcing.dynamic = function(t, xds_obj){
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
 dynamic_forcing = function(xds_obj){
@@ -50,6 +59,9 @@ dynamic_forcing = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
 dynamic_forcing.none = function(xds_obj){
@@ -68,6 +80,9 @@ dynamic_forcing.none = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
 dynamic_forcing.setup = function(xds_obj){
@@ -79,6 +94,9 @@ dynamic_forcing.setup = function(xds_obj){
 #' already been set up, then turn on dynamic
 #' forcing and set all the
 #' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
 dynamic_forcing.dynamic = function(xds_obj){

@@ -20,3 +20,4 @@ a IRS contact model object
 A set up utility function for
 \link{IRS_Contact}.
 }
+\keyword{internal}

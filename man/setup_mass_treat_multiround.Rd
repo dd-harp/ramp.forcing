@@ -13,3 +13,4 @@ setup_mass_treat_multiround(xds_obj)
 This sets up a function to set the value of bed net
 treatage
 }
+\keyword{internal}

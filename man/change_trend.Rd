@@ -19,3 +19,4 @@ an \strong{\code{xds}} object
 \description{
 Set the interpolating points for F_trend
 }
+\keyword{internal}

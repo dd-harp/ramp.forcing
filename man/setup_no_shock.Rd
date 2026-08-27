@@ -15,3 +15,4 @@ an \strong{\code{xds}} object
 \description{
 Set up "no shock"
 }
+\keyword{internal}

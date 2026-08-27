@@ -18,3 +18,4 @@ maximum irs coverage, as a vector
 Get the values from a model
 that set maximum irs coverage
 }
+\keyword{internal}

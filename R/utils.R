@@ -8,6 +8,7 @@
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 make_none_object = function(xds_obj){
   none_list <- list()
   none_list$name <- "none"

@@ -21,3 +21,4 @@ Set up an object to model
 bed net effective coverage, which is defined
 as the product of access and use.
 }
+\keyword{internal}

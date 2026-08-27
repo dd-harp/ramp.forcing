@@ -117,6 +117,7 @@ travel_dynamics <- function(t, y, xds_obj){
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_F_travel = function(setup_name, xds_obj, i, options=list()){
   class(setup_name) = setup_name
   UseMethod("setup_F_travel", setup_name)
@@ -166,6 +167,7 @@ setup_F_travel.ts_func = function(setup_name, xds_obj, i, options=list()){
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_F_travel_eir = function(setup_name, xds_obj, i, options=list()){
   class(setup_name) = setup_name
   UseMethod("setup_F_travel_eir", setup_name)

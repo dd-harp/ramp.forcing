@@ -17,3 +17,4 @@ a \strong{\code{ramp.xds}}  model object
 \description{
 Get Bednet Events
 }
+\keyword{internal}

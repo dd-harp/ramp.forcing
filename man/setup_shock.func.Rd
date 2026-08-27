@@ -13,8 +13,12 @@
 
 \item{opts}{a list of options to override defaults}
 }
+\value{
+an \strong{\code{xds}} object
+}
 \description{
 If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

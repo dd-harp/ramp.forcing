@@ -19,3 +19,4 @@ Return an object to configure
 multiple \code{sharkbite} functions representing
 coverage levels over many mass distribution events
 }
+\keyword{internal}

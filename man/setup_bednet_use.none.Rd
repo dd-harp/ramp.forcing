@@ -19,3 +19,4 @@ the \strong{\code{xds}} model object
 \description{
 Set up the null bed net use object
 }
+\keyword{internal}

@@ -9,6 +9,7 @@
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_object = function(xds_obj){
   xds_obj$bednet_obj = make_none_object()
   xds_obj <- setup_bednet_access("none", xds_obj, list())
@@ -42,6 +43,7 @@ setup_bednet_object = function(xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_bednets = function(xds_obj,
                         access_name = 'none', access_opts = list(),
                         use_name = 'none', use_opts = list(),
@@ -78,6 +80,7 @@ setup_bednets = function(xds_obj,
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_1 <- function(t, y, xds_obj){
   UseMethod("Bed_Net_1", xds_obj$bednet_obj)
 }
@@ -90,6 +93,7 @@ Bed_Net_1 <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_1.none <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -101,6 +105,7 @@ Bed_Net_1.none <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_1.static<- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -113,6 +118,7 @@ Bed_Net_1.static<- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_1.dynamic <- function(t, y, xds_obj){
   xds_obj <- Bed_Net_Access(t, xds_obj)
   xds_obj <- Use_Bed_Net(t, xds_obj)
@@ -130,6 +136,7 @@ Bed_Net_1.dynamic <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_2 <- function(t, y, xds_obj){
   UseMethod("Bed_Net_2", xds_obj$bednet_obj)
 }
@@ -141,6 +148,7 @@ Bed_Net_2 <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_2.none <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -151,6 +159,7 @@ Bed_Net_2.none <- function(t, y, xds_obj){
 #' @inheritParams Bed_Net_2
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_2.static<- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -163,6 +172,7 @@ Bed_Net_2.static<- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_2.dynamic <- function(t, y, xds_obj){
   xds_obj <- Bed_Net_Coverage(t, y, xds_obj)
   xds_obj <- Bed_Net_Contact(t, y, xds_obj)

@@ -9,6 +9,7 @@
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_irs_object = function(xds_obj){
   xds_obj$irs_obj = make_none_object()
   xds_obj <- setup_spray_houses("none", xds_obj, list())
@@ -39,6 +40,7 @@ setup_irs_object = function(xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_irs = function(xds_obj,
                          spray_houses_name = 'none', spray_houses_opts = list(),
                          effects_name = 'none', effects_opts = list(),
@@ -71,6 +73,7 @@ setup_irs = function(xds_obj,
 #' @param xds_obj a **`ramp.xds`**  model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_1 <- function(t, y, xds_obj){
   UseMethod("IRS_1", xds_obj$irs_obj)
 }
@@ -83,6 +86,7 @@ IRS_1 <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_1.none <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -94,6 +98,7 @@ IRS_1.none <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_1.static <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -107,6 +112,7 @@ IRS_1.static <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_1.dynamic <- function(t, y, xds_obj){
   xds_obj <- SprayHouses(t, y, xds_obj)
   xds_obj <- IRS_Effects(t, y, xds_obj)
@@ -123,6 +129,7 @@ IRS_1.dynamic <- function(t, y, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_2 <- function(t, y, xds_obj){
   UseMethod("IRS_2", xds_obj$irs_obj)
 }
@@ -135,6 +142,7 @@ IRS_2 <- function(t, y, xds_obj){
 #' @param xds_obj a **`ramp.xds`**  model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_2.none <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -147,6 +155,7 @@ IRS_2.none <- function(t, y, xds_obj){
 #' @param xds_obj a **`ramp.xds`**  model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_2.static <- function(t, y, xds_obj){
   return(xds_obj)
 }
@@ -159,6 +168,7 @@ IRS_2.static <- function(t, y, xds_obj){
 #' @param xds_obj a **`ramp.xds`**  model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_2.dynamic <- function(t, y, xds_obj){
   xds_obj <- IRS_Coverage(t, y, xds_obj)
   xds_obj <- IRS_Contact(t, y, xds_obj)

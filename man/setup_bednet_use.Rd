@@ -20,3 +20,4 @@ the \strong{\code{xds}} model object
 Set up an object to model
 bed net use
 }
+\keyword{internal}

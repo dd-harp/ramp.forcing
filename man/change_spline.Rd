@@ -19,3 +19,4 @@ an \strong{\code{xds}} object
 \description{
 Change the interpolation points for a spline function.
 }
+\keyword{internal}

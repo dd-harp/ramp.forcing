@@ -8,6 +8,7 @@
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_area_spray_object = function(xds_obj){
   xds_obj$area_spray_obj = make_none_object()
   return(xds_obj)

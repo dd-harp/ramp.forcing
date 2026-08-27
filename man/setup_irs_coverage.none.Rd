@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Set up a model for IRS effects that does nothing.
 }
+\keyword{internal}

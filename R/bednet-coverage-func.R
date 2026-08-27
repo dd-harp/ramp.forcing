@@ -8,6 +8,7 @@
 #'
 #' @inheritParams setup_bednet_coverage
 #' @export
+#' @keywords internal
 setup_bednet_coverage.func = function(name="func", xds_obj, options=list()){
   class(xds_obj$vector_control_obj) = "dynamic"
   class(xds_obj$bednet_obj) = "dynamic"
@@ -33,6 +34,7 @@ setup_bednet_coverage.func = function(name="func", xds_obj, options=list()){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 make_bednet_coverage_function = function(options=list(),
                                      mean=1,
                                      F_season=F_one,
@@ -67,6 +69,7 @@ make_bednet_coverage_function = function(options=list(),
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Coverage.func <- function(t, y, xds_obj) {
   with(xds_obj$bednet_obj$cover_obj,{
     coverage <- pmin(pmax(0, mean*F_season(t)*F_trend(t)),1)

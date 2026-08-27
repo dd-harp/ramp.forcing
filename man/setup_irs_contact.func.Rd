@@ -17,3 +17,4 @@
 This sets up a function to set the value of bed net
 contact
 }
+\keyword{internal}

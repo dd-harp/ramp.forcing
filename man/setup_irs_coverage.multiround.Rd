@@ -20,3 +20,4 @@ a IRS coverage model object
 A set up utility function for
 \link{IRS_Coverage}.
 }
+\keyword{internal}

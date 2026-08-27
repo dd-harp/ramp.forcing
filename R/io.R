@@ -8,6 +8,7 @@
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 readXDS = function(filename){
   xds_obj <- readRDS(filename)
   for(s in 1:xds_obj$nVectorSpecies)

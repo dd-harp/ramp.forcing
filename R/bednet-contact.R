@@ -10,6 +10,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_bednet_contact = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_bednet_contact", name)
@@ -27,6 +28,7 @@ setup_bednet_contact = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_contact.none = function(name, xds_obj, options=list()){
   xds_obj$bednet_obj$contact_obj = make_none_object()
   return(xds_obj)
@@ -43,6 +45,7 @@ setup_bednet_contact.none = function(name, xds_obj, options=list()){
 #' @returns a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 get_bednet_contact = function(xds_obj){
   xds_obj$bednet_obj$contact
 }
@@ -58,6 +61,7 @@ get_bednet_contact = function(xds_obj){
 #' @returns maximum bednet coverage, as a vector
 #'
 #' @export
+#' @keywords internal
 change_bednet_contact = function(coverage, xds_obj){
   UseMethod("change_bednet_contact", xds_obj$bednet_obj$contact_obj)
 }
@@ -73,6 +77,7 @@ change_bednet_contact = function(coverage, xds_obj){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Contact <- function(t, y, xds_obj) {
   UseMethod("Bed_Net_Contact", xds_obj$bednet_obj$contact_obj)
 }
@@ -85,6 +90,7 @@ Bed_Net_Contact <- function(t, y, xds_obj) {
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Contact.none <- function(t, y, xds_obj) {
   return(xds_obj)
 }
@@ -99,6 +105,7 @@ Bed_Net_Contact.none <- function(t, y, xds_obj) {
 #'
 #' @returns a **`ramp.xds`** xds_obj object
 #' @export
+#' @keywords internal
 show_bednet_contact = function(tt, xds_obj, clr="black", add=FALSE){
   y <- get_inits(xds_obj, flatten=TRUE)
   xds_obj <- Bed_Net_Coverage(tt, y, xds_obj)

@@ -15,3 +15,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Sets up the null bednet model object
 }
+\keyword{internal}

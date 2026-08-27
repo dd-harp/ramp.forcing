@@ -11,6 +11,7 @@
 #' @return a multishock function
 #'
 #' @export
+#' @keywords internal
 makepar_F_multishock = function(nRounds, rounds){
   if(nRounds ==1) rounds_par = rounds[[1]]
   if(nRounds > 1) rounds_par = makepar_F_product(rounds[[1]], rounds[[2]])
@@ -31,6 +32,7 @@ makepar_F_multishock = function(nRounds, rounds){
 #' @return set up the rounds
 #'
 #' @export
+#' @keywords internal
 setup_F_multishock = function(xds_obj){
   rounds = list()
   if(with(xds_obj$events_obj, exists("irs"))){

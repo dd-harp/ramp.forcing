@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 The null model for irs_coverage
 }
+\keyword{internal}

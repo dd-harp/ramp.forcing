@@ -19,3 +19,4 @@ Call all the functions to set the
 values of exogenous variables and then revert
 the \code{none} case
 }
+\keyword{internal}

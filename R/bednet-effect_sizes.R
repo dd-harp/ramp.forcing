@@ -12,6 +12,7 @@
 #'
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 setup_bednet_effect_sizes = function(name, xds_obj, s=1, options=list()){
  class(name) <- name
  UseMethod("setup_bednet_effect_sizes", name)
@@ -27,6 +28,7 @@ setup_bednet_effect_sizes = function(name, xds_obj, s=1, options=list()){
 #' @return the **`xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_effect_sizes.none = function(name, xds_obj, s=1, options=list()){
  xds_obj$bednet_obj$eff_sz_obj[[s]] = make_none_object()
  return(xds_obj)
@@ -44,6 +46,7 @@ setup_bednet_effect_sizes.none = function(name, xds_obj, s=1, options=list()){
 #'
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Effect_Sizes <- function(t, y, xds_obj, s=1){
  UseMethod("Bed_Net_Effect_Sizes", xds_obj$bednet_obj$eff_sz_obj[[s]])
 }
@@ -59,6 +62,7 @@ Bed_Net_Effect_Sizes <- function(t, y, xds_obj, s=1){
 
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Effect_Sizes.none <- function(t, y, xds_obj, s=1){
  return(xds_obj)
 }

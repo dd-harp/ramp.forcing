@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Compute IRS contact
 }
+\keyword{internal}

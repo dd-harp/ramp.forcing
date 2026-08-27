@@ -25,6 +25,7 @@ Importation.dynamic = function(t, y, xds_obj){
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 dynamic_importation = function(xds_obj){
   UseMethod("dynamic_importation", xds_obj$importation_obj)
 }

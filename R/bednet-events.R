@@ -14,6 +14,7 @@
 #' @returns a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_events = function(xds_obj, start_day, type = "pbo", event_length=20, coverage=1, contact=1, shock=0.5, d_50=365, d_shape=1/365){
 
   xds_obj <- setup_vector_control(xds_obj)
@@ -56,6 +57,7 @@ setup_bednet_events = function(xds_obj, start_day, type = "pbo", event_length=20
 #'
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 add_bednet_events = function(xds_obj, start_day, type = "pbo", event_length=20, coverage=1, contact=1, shock=1, d_50 = 365, d_shape=1/365){
   M = length(start_day)
   if(length(type)==1) type = rep(type, M)
@@ -100,6 +102,7 @@ add_bednet_events = function(xds_obj, start_day, type = "pbo", event_length=20, 
 #' @return set up the rounds
 #'
 #' @export
+#' @keywords internal
 setup_bednet_rounds = function(xds_obj, mx, as_shock=FALSE){
   xds_obj$events_obj$bednet$rounds = list()
   with(xds_obj$events_obj$bednet,{

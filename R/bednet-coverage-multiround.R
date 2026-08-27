@@ -11,6 +11,7 @@
 #' @return an **`xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_coverage.multiround = function(name="multiround", xds_obj, options=list()){
   class(xds_obj$vector_control_obj) = "dynamic"
   class(xds_obj$bednet_obj) = "dynamic"
@@ -71,6 +72,7 @@ setup_F_coverage_bednet_multiround = function(xds_obj){
 #' @inheritParams Bed_Net_Coverage
 #' @return an **`xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Coverage.multiround <- function(t, y, xds_obj) {
   with(xds_obj$bednet_obj$cover_obj,{
     xds_obj$bednet_obj$coverage = F_cover(t)

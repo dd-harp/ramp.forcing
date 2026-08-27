@@ -18,3 +18,4 @@ With multi-round bed net contact, there
 is a different relationship between contact
 and contact in each round
 }
+\keyword{internal}

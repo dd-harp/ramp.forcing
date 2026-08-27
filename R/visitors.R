@@ -122,6 +122,7 @@ visitor_dynamics <- function(t, y, xds_obj){
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_F_visitors = function(mod_name, xds_obj, s, options){
   class(mod_name) = mod_name
   UseMethod("setup_F_visitors", mod_name)
@@ -156,6 +157,7 @@ setup_F_visitors.ts_func = function(mod_name, xds_obj, s, options){
 #'
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_F_vis_kappa = function(mod_name, xds_obj, s, options){
   class(mod_name) = mod_name
   UseMethod("setup_F_vis_kappa", mod_name)

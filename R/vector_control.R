@@ -17,6 +17,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_vector_control = function(xds_obj){
   UseMethod("setup_vector_control", xds_obj$vector_control_obj)
 }
@@ -30,6 +31,7 @@ setup_vector_control = function(xds_obj){
 #' @param xds_obj a **`ramp.xds`** model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_vector_control.none = function(xds_obj){
   class(xds_obj$vector_control_obj) <- 'static'
   xds_obj <- setup_bednet_object(xds_obj)
@@ -64,6 +66,7 @@ setup_vector_control.static = function(xds_obj){
 #' @param xds_obj a **`ramp.xds`** model object
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_vector_control.dynamic = function(xds_obj){
   return(xds_obj)
 }
@@ -97,6 +100,7 @@ VectorControl1.dynamic <- function(t, y, xds_obj) {
 #' @inheritParams ramp.xds::VectorControl1
 #' @return a named [list]
 #' @export
+#' @keywords internal
 VectorControl1.static <- function(t, y, xds_obj) {
   return(xds_obj)
 }
@@ -106,6 +110,7 @@ VectorControl1.static <- function(t, y, xds_obj) {
 #' @inheritParams ramp.xds::VectorControl2
 #' @return a named [list]
 #' @export
+#' @keywords internal
 VectorControl2.dynamic <- function(t, y, xds_obj) {
   xds_obj = Bed_Net_2(t, y, xds_obj)
   xds_obj = IRS_2(t, y, xds_obj)
@@ -117,6 +122,7 @@ VectorControl2.dynamic <- function(t, y, xds_obj) {
 #' @inheritParams ramp.xds::VectorControl2
 #' @return a named [list]
 #' @export
+#' @keywords internal
 VectorControl2.static <- function(t, y, xds_obj) {
   return(xds_obj)
 }

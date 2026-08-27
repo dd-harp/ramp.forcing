@@ -6,6 +6,7 @@
 #' @param xds_obj a [list]
 #' @return [list]
 #' @export
+#' @keywords internal
 OviTraps <- function(t, xds_obj) {
   UseMethod("OviTraps", xds_obj$ovitraps)
 }
@@ -15,6 +16,7 @@ OviTraps <- function(t, xds_obj) {
 #' @inheritParams OviTraps
 #' @return [list]
 #' @export
+#' @keywords internal
 OviTraps.none <- function(t, xds_obj) {
   return(xds_obj)
 }
@@ -23,6 +25,7 @@ OviTraps.none <- function(t, xds_obj) {
 #' @param xds_obj a [list]
 #' @return [list]
 #' @export
+#' @keywords internal
 setup_no_ovitraps <- function(xds_obj) {
   ovitraps <- list()
   class(ovitraps) <- 'none'

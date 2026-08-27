@@ -9,6 +9,7 @@
 #'
 #' @return a IRS coverage model object
 #' @export
+#' @keywords internal
 setup_irs_coverage.multiround = function(name, xds_obj, options=list()){
   class(xds_obj$vector_control_obj) = "dynamic"
   class(xds_obj$irs_obj) = "dynamic"
@@ -31,6 +32,7 @@ setup_irs_coverage.multiround = function(name, xds_obj, options=list()){
 #' @importFrom ramp.func make_function
 #'
 #' @export
+#' @keywords internal
 setup_F_coverage_irs_multiround = function(xds_obj){
   xds_obj <- setup_irs_rounds(xds_obj, xds_obj$events_obj$irs$coverage)
   with(xds_obj$events_obj$irs,{
@@ -51,6 +53,7 @@ setup_F_coverage_irs_multiround = function(xds_obj){
 #' @param frac_sprayed the fraction of houses sprayed
 #'
 #' @export
+#' @keywords internal
 change_irs_coverage_multiround = function(xds_obj, frac_sprayed){
   stopifnot(with(xds_obj, exists("events_obj")))
   stopifnot(with(xds_obj$events_obj, exists("irs")))
@@ -66,6 +69,7 @@ change_irs_coverage_multiround = function(xds_obj, frac_sprayed){
 #' @inheritParams IRS_Coverage
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Coverage.multiround <- function(t, y, xds_obj) {
   with(xds_obj$irs_obj$cover_obj,{
     xds_obj$irs_obj$coverage = F_cover(t)

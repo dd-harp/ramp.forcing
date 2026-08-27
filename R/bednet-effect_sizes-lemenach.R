@@ -5,6 +5,7 @@
 #' forcing and set all the
 #' @inheritParams setup_bednet_effect_sizes
 #' @export
+#' @keywords internal
 setup_bednet_effect_sizes.lemenach = function(name, xds_obj, s=1, options=list()){
   class(xds_obj$bednet_obj$eff_sz_obj) = "lemenach"
   xds_obj$bednet_obj$eff_sz_obj[[s]] = make_bednet_effect_sizes_lemenach(options)
@@ -23,6 +24,7 @@ setup_bednet_effect_sizes.lemenach = function(name, xds_obj, s=1, options=list()
 #' @param ss probability of mosquito successfully feeding upon contact with ITN
 #' @return a bed net effect size model object
 #' @export
+#' @keywords internal
 make_bednet_effect_sizes_lemenach = function(options=list(),
                                              tau0_frac = c(0.68/3, 2.32/3),
                                              rr = 0.56, ss = 0.03){
@@ -43,6 +45,7 @@ make_bednet_effect_sizes_lemenach = function(options=list(),
 #' @importFrom stats pexp
 #' @seealso [compute_bednet_effect_sizes_lemenach()]
 #' @export
+#' @keywords internal
 Bed_Net_Effect_Sizes.lemenach <- function(t, y, xds_obj, s){
   phi = xds_obj$bednet_obj$contact
   with(xds_obj$bednet_obj$eff_sz_obj[[s]],{
@@ -77,6 +80,7 @@ Bed_Net_Effect_Sizes.lemenach <- function(t, y, xds_obj, s){
 #' @references{This implements the model for ITN effect sizes
 #' from \insertRef{LeMenachA2007_ITN}{ramp.control}}
 #' @importFrom stats pexp
+#' @keywords internal
 compute_bednet_effect_sizes_lemenach = function(ix, phi, ff, qq, gg, tau0_frac=c(0.68/3, 2.32/3), rr=0.56, ss=0.03){
   f=ff[ix]; q=qq[ix]; g=gg[ix]
 

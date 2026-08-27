@@ -10,6 +10,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_bednet_access = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_bednet_access", name)
@@ -27,6 +28,7 @@ setup_bednet_access = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_access.none = function(name, xds_obj, options=list()){
   xds_obj$bednet_obj$access_obj = make_none_object()
   return(xds_obj)
@@ -42,6 +44,7 @@ setup_bednet_access.none = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 Bed_Net_Access <- function(t, xds_obj) {
   UseMethod("Bed_Net_Access", xds_obj$bednet_obj$access_obj)
 }
@@ -51,6 +54,7 @@ Bed_Net_Access <- function(t, xds_obj) {
 #' @inheritParams Bed_Net_Access
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Access.none <- function(t, xds_obj) {
   return(xds_obj)
 }

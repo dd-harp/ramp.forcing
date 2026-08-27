@@ -28,3 +28,4 @@ for contact relative to coverage
 Set up a linear model
 for contact relative to coverage
 }
+\keyword{internal}

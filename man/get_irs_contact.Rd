@@ -16,3 +16,4 @@ a \strong{\code{ramp.xds}} model object
 Get the values from a model
 that set maximum irs contact
 }
+\keyword{internal}

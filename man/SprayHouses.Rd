@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 The model
 }
+\keyword{internal}

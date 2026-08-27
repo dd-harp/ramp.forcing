@@ -10,6 +10,7 @@
 #'
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 setup_bednet_use = function(name, xds_obj, options=list()){
  class(name) <- name
  UseMethod("setup_bednet_use", name)
@@ -27,6 +28,7 @@ setup_bednet_use = function(name, xds_obj, options=list()){
 #' @return the **`xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_use.none = function(name, xds_obj, options=list()){
  xds_obj$bednet_obj$use_obj = make_none_object()
  return(xds_obj)
@@ -43,6 +45,7 @@ setup_bednet_use.none = function(name, xds_obj, options=list()){
 #'
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 Use_Bed_Net <- function(t, xds_obj) {
  UseMethod("Use_Bed_Net", xds_obj$bednet_obj$use_obj)
 }
@@ -52,6 +55,7 @@ Use_Bed_Net <- function(t, xds_obj) {
 #' @inheritParams Use_Bed_Net
 #' @return the **`xds`** model object
 #' @export
+#' @keywords internal
 Use_Bed_Net.none <- function(t, xds_obj) {
  return(xds_obj)
 }

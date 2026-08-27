@@ -20,3 +20,4 @@ an \strong{\code{xds}} object
 Set new \eqn{y}-values for the spline interpolating points
 and update \code{F_trend}
 }
+\keyword{internal}

@@ -6,6 +6,7 @@
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 Humidity <- function(t, xds_obj) {
   UseMethod("Humidity", xds_obj$humidity)
 }
@@ -15,6 +16,7 @@ Humidity <- function(t, xds_obj) {
 #' @inheritParams Humidity
 #' @return [list]
 #' @export
+#' @keywords internal
 Humidity.none <- function(t, xds_obj) {
   return(xds_obj)
 }
@@ -23,6 +25,7 @@ Humidity.none <- function(t, xds_obj) {
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_no_humidity <- function(xds_obj) {
   humidity <- 'none'
   class(humidity) <- 'none'
@@ -39,6 +42,7 @@ setup_no_humidity <- function(xds_obj) {
 #' @param Topts a list of options to override defaults
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_humidity = function(name, xds_obj, Topts=list()){
   class(name) <- name
   UseMethod("setup_humidity", name)
@@ -49,6 +53,7 @@ setup_humidity = function(name, xds_obj, Topts=list()){
 #' @inheritParams Humidity
 #' @return [list]
 #' @export
+#' @keywords internal
 Humidity.func <- function(t, xds_obj) {with(xds_obj$humidity,{
   xds_obj$vars$Humidity = mean*F_season(t)*F_trend(t)
 })}
@@ -59,6 +64,7 @@ Humidity.func <- function(t, xds_obj) {with(xds_obj$humidity,{
 #' forcing and set all the
 #' @inheritParams setup_humidity
 #' @export
+#' @keywords internal
 setup_humidity.func = function(name, xds_obj, Topts=list()){
   xds_obj = setup_humidity_func(xds_obj, Topts())
 }
@@ -75,6 +81,7 @@ setup_humidity.func = function(name, xds_obj, Topts=list()){
 #' @importFrom ramp.xds F_one
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_humidity_func = function(xds_obj, Topts=list(), mean = 80, F_season=F_one, F_trend=F_one){
   humidity <- list()
   class(humidity) <- 'func'

@@ -26,3 +26,4 @@ Set up the null bed net coverage object
 
 Set up the null bed net coverage object
 }
+\keyword{internal}

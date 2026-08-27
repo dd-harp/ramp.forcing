@@ -17,3 +17,4 @@ an \strong{\code{xds}} object
 \description{
 The null model for shock
 }
+\keyword{internal}

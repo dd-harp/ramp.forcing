@@ -7,6 +7,7 @@
 #'
 #' @inheritParams setup_irs_contact
 #' @export
+#' @keywords internal
 setup_irs_contact.func = function(name="func", xds_obj, options=list()){
   class(xds_obj$irs_obj) = "dynamic"
   xds_obj$irs_obj$contact_obj <- make_irs_contact_func(options)
@@ -31,6 +32,7 @@ setup_irs_contact.func = function(name="func", xds_obj, options=list()){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 make_irs_contact_func = function(options=list(),
                                   mean=1,
                                   F_season=F_one,
@@ -61,6 +63,7 @@ make_irs_contact_func = function(options=list(),
 #' @inheritParams IRS_Contact
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Contact.func <- function(t, y, xds_obj) {
   with(xds_obj$irs_obj$contact_obj,{
     xds_obj$irs_obj$contact = pmin(pmax(0, mean*F_season(t)*F_trend(t)),1)

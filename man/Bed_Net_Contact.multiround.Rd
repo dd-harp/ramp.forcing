@@ -19,3 +19,4 @@ a \strong{\code{xds}} object
 \description{
 The null model for bed net contact
 }
+\keyword{internal}

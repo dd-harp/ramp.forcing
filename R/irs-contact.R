@@ -11,6 +11,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_irs_contact = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_irs_contact", name)
@@ -26,6 +27,7 @@ setup_irs_contact = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_irs_contact.none = function(name, xds_obj, options=list()){
   xds_obj$irs_obj$contact_obj = make_none_object()
   xds_obj$irs_obj$contact = list()
@@ -42,6 +44,7 @@ setup_irs_contact.none = function(name, xds_obj, options=list()){
 #' @returns a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 get_irs_contact = function(xds_obj){
   xds_obj$irs_obj$contact
 }
@@ -57,6 +60,7 @@ get_irs_contact = function(xds_obj){
 #' @returns maximum irs contact, as a vector
 #'
 #' @export
+#' @keywords internal
 change_irs_contact = function(contact, xds_obj){
   UseMethod("get_irs_contact", xds_obj$irs_obj$contact_obj)
 }
@@ -71,6 +75,7 @@ change_irs_contact = function(contact, xds_obj){
 #'
 #' @returns a **`ramp.xds`** xds_obj object
 #' @export
+#' @keywords internal
 show_irs_contact = function(tt, xds_obj, clr="black", add=FALSE){
   y <- get_inits(xds_obj, flatten=TRUE)
   xds_obj <- IRS_Coverage(tt, y, xds_obj)
@@ -90,6 +95,7 @@ show_irs_contact = function(tt, xds_obj, clr="black", add=FALSE){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Contact <- function(t, y, xds_obj) {
   UseMethod("IRS_Contact", xds_obj$irs_obj$contact_obj)
 }
@@ -99,6 +105,7 @@ IRS_Contact <- function(t, y, xds_obj) {
 #' @inheritParams IRS_Contact
 #' @return [list]
 #' @export
+#' @keywords internal
 IRS_Contact.none <- function(t, y, xds_obj) {
   return(xds_obj)
 }

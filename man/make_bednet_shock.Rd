@@ -31,3 +31,4 @@ The parameters
 specify a model for bed net coverage
 after a mass distribution
 }
+\keyword{internal}

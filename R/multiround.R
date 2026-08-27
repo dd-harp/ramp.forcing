@@ -11,6 +11,7 @@
 #' @return a multiround function
 #'
 #' @export
+#' @keywords internal
 makepar_F_multiround = function(nRounds, rounds){
   if(nRounds ==1) rounds_par = rounds[[1]]
   if(nRounds > 1) rounds_par = makepar_F_nproduct(rounds[[1]], rounds[[2]])

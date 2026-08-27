@@ -24,3 +24,4 @@ Implements \link{IRS_Effect_Sizes} for the Le Menach IRS model of vector control
 \seealso{
 \code{\link[=compute_irs_effect_sizes_simple]{compute_irs_effect_sizes_simple()}}
 }
+\keyword{internal}

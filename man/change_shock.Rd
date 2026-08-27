@@ -19,3 +19,4 @@ an \strong{\code{xds}} object
 \description{
 Change parameters for the shock function
 }
+\keyword{internal}

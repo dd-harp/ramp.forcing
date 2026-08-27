@@ -22,3 +22,4 @@ the \strong{\code{xds}} model object
 Set up a model object to compute
 an effect sizes of bed nets
 }
+\keyword{internal}

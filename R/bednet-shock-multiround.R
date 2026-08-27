@@ -10,6 +10,7 @@
 #' @return an **`xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_shock_multiround = function(xds_obj, options=list()){
   N = xds_obj$events_obj$bednet$N
 
@@ -40,6 +41,7 @@ setup_bednet_shock_multiround = function(xds_obj, options=list()){
 #' @return an **`xds`** model object
 #'
 #' @export
+#' @keywords internal
 change_bednet_shock_multiround = function(xds_obj, shock){
   stopifnot(with(xds_obj, exists("events_obj")))
   stopifnot(with(xds_obj$events_obj, exists("bednet")))
@@ -61,6 +63,7 @@ change_bednet_shock_multiround = function(xds_obj, shock){
 #'
 #' @returns a **`ramp.xds`** xds_obj object
 #' @export
+#' @keywords internal
 show_bednet_shock = function(tt, xds_obj, clr="black", add=FALSE){
   if(add==FALSE)
     graphics::plot(tt, xds_obj$EIR_obj$F_shock(tt), type = "n", xlab="Time (Days)", ylab = "Coverage")

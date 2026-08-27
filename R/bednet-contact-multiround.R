@@ -10,6 +10,7 @@
 #'
 #' @inheritParams setup_bednet_contact
 #' @export
+#' @keywords internal
 setup_bednet_contact.multiround = function(name="multiround", xds_obj, options=list()){
   class(xds_obj$vector_control_obj) <- "dynamic"
   class(xds_obj$bednet_obj) <- "dynamic"
@@ -39,6 +40,7 @@ setup_bednet_contact.multiround = function(name="multiround", xds_obj, options=l
 #' @return a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 change_bednet_contact_multiround = function(xds_obj, contact){
   stopifnot(with(xds_obj, exists("events_obj")))
   stopifnot(with(xds_obj$events_obj, exists("bednet")))
@@ -61,6 +63,7 @@ change_bednet_contact_multiround = function(xds_obj, contact){
 #' @importFrom ramp.func make_function
 #'
 #' @export
+#' @keywords internal
 setup_F_contact_bednet_multiround = function(xds_obj){
   xds_obj <- setup_bednet_rounds(xds_obj, xds_obj$events_obj$bednet$contact)
   with(xds_obj$events_obj$bednet,{
@@ -74,6 +77,7 @@ setup_F_contact_bednet_multiround = function(xds_obj){
 #' @inheritParams Bed_Net_Contact
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 Bed_Net_Contact.multiround <- function(t, y, xds_obj) {
   with(xds_obj$bednet_obj$contact_obj,{
     xds_obj$bednet_obj$contact = F_contact(t)

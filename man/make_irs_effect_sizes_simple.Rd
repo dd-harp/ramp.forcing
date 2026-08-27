@@ -17,3 +17,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 A simple model for IRS effect sizes
 }
+\keyword{internal}

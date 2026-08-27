@@ -17,3 +17,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Set the value of bed net access
 }
+\keyword{internal}

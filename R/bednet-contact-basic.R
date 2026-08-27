@@ -8,6 +8,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 Bed_Net_Contact.linear <- function(t, y, xds_obj) {
   cp = xds_obj$bednet_obj$contact_obj$contact_parameter
   xds_obj$bednet_obj$contact = xds_obj$bednet_obj$coverage*cp
@@ -26,6 +27,7 @@ Bed_Net_Contact.linear <- function(t, y, xds_obj) {
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_bednet_contact.linear= function(name, xds_obj, options=list()){
   contact_obj <- list()
   class(contact_obj) <- "linear"

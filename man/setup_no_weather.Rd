@@ -15,3 +15,4 @@ setup_no_weather(xds_obj)
 \description{
 Set up the no_forcing model for weather
 }
+\keyword{internal}

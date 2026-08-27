@@ -23,3 +23,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Implements a model published in 2007
 }
+\keyword{internal}

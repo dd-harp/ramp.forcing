@@ -4,6 +4,7 @@
 #' @param xds_obj an [list]
 #' @return a [list]
 #' @export
+#' @keywords internal
 AvailableSugar <- function(xds_obj) {
   UseMethod("AvailableSugar", xds_obj$SUGAR)
 }
@@ -13,6 +14,7 @@ AvailableSugar <- function(xds_obj) {
 #' @param xds_obj a [list]
 #' @return a [numeric] vector of length `nPatches`
 #' @export
+#' @keywords internal
 AvailableSugar.static <- function(xds_obj){
   return(xds_obj)
 }
@@ -22,6 +24,7 @@ AvailableSugar.static <- function(xds_obj){
 #' @param xds_obj a [list]
 #' @return a [numeric] vector of length `nPatches`
 #' @export
+#' @keywords internal
 AvailableSugar.forced <- function(xds_obj){
   xds_obj$S = xds_obj$nectar + xds_obj$sugar_baits
   return(xds_obj)

@@ -28,3 +28,4 @@ trivial module for every mode of
 vector control is set up. Otherwise,
 nothing happens.
 }
+\keyword{internal}

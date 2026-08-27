@@ -21,3 +21,4 @@ the \strong{\code{xds}} model object
 \description{
 Set up the null bed net effect sizes model object
 }
+\keyword{internal}

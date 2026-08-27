@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Set up the null bed net ownership object
 }
+\keyword{internal}

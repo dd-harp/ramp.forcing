@@ -8,6 +8,7 @@
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_atsb_object = function(xds_obj){
   xds_obj$atsb_obj = make_none_object()
   return(xds_obj)

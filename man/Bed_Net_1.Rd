@@ -20,3 +20,4 @@ a \strong{\code{ramp.xds}} model object
 Set the value of exogenous variables related to
 bed nets
 }
+\keyword{internal}

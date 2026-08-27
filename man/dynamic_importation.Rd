@@ -17,3 +17,4 @@ Activate dynamic importation by upgrading the
 \code{importation_obj} to class \code{dynamic} and setting up the
 travel and visitor sub-objects.
 }
+\keyword{internal}

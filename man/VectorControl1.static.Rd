@@ -27,3 +27,4 @@ vector control.
 Vector control modules require
 \href{https://github.com/dd-harp/ramp.control}{\strong{\code{ramp.control}}}.
 }
+\keyword{internal}

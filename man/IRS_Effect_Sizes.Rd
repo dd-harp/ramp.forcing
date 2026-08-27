@@ -22,3 +22,4 @@ a \strong{\code{ramp.xds}} model object
 Set the value of variables to model
 the effect_sizes of IRS
 }
+\keyword{internal}

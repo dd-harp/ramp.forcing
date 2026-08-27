@@ -22,3 +22,4 @@ an \strong{\code{xds}} object
 Setup a model for time spent traveling
 and exposure while traveling.
 }
+\keyword{internal}

@@ -18,3 +18,4 @@ maximum irs contact, as a vector
 Get the values from a model
 that set maximum irs contact
 }
+\keyword{internal}

@@ -26,3 +26,4 @@ a \code{sharkbite} function object
 Return the parameters
 to make sharkfin function for an irs round.
 }
+\keyword{internal}

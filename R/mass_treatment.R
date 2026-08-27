@@ -9,6 +9,7 @@
 #' @param xds_obj a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 setup_mass_treat_multiround = function(xds_obj){
 
   with(xds_obj,stopifnot(exists("events_obj")))
@@ -42,6 +43,7 @@ setup_mass_treat_multiround = function(xds_obj){
 #'
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 make_mass_treat_multiround = function(xds_obj, screen){
   with(xds_obj, stopifnot(exists("events_obj")))
   with(xds_obj$events_obj, stopifnot(exists("mass_treat")))
@@ -68,6 +70,7 @@ make_mass_treat_multiround = function(xds_obj, screen){
 #' @return a **`xds`** object
 #' @importFrom ramp.func make_function
 #' @export
+#' @keywords internal
 make_F_mass_treat = function(treat){with(treat,{
   rounds <- list()
   for(i in 1:treat$nRounds){

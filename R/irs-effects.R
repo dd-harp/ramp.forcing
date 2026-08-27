@@ -11,6 +11,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_irs_effects = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_irs_effects", name)
@@ -28,6 +29,7 @@ setup_irs_effects = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_irs_effects.none = function(name, xds_obj, options=list()){
   xds_obj$irs_obj$effects_obj = make_none_object()
   return(xds_obj)
@@ -44,6 +46,7 @@ setup_irs_effects.none = function(name, xds_obj, options=list()){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Effects <- function(t, y, xds_obj) {
   UseMethod("IRS_Effects", xds_obj$irs_obj$effects_obj)
 }
@@ -53,6 +56,7 @@ IRS_Effects <- function(t, y, xds_obj) {
 #' @inheritParams IRS_Effects
 #' @return [list]
 #' @export
+#' @keywords internal
 IRS_Effects.none <- function(t, y, xds_obj) {
   return(xds_obj)
 }

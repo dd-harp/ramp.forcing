@@ -15,3 +15,4 @@ setup_no_ovitraps(xds_obj)
 \description{
 Set up the none model for oviposition traps (do nothing)
 }
+\keyword{internal}

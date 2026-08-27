@@ -18,3 +18,4 @@ maximum bednet coverage, as a vector
 Get the values from a model
 that set maximum bednet coverage
 }
+\keyword{internal}

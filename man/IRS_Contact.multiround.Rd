@@ -20,3 +20,4 @@ a \strong{\code{ramp.xds}} model object
 A model for IRS contact over time
 when there have been several rounds of IRS
 }
+\keyword{internal}

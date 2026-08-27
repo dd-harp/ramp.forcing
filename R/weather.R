@@ -25,6 +25,7 @@ Weather.none <- function(t, xds_obj) {
 #' @param xds_obj a [list]
 #' @return [list]
 #' @export
+#' @keywords internal
 setup_no_weather <- function(xds_obj) {
   weather <- 'none'
   class(weather) <- 'none'

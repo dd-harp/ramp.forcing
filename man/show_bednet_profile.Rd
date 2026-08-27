@@ -23,3 +23,4 @@ Return the parameters
 to call a sharkfin function to model
 a single round of bednet.
 }
+\keyword{internal}

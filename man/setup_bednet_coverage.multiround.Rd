@@ -20,3 +20,4 @@ an \strong{\code{xds}} model object
 This sets up a function to set the value of bed net
 coverage
 }
+\keyword{internal}

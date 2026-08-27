@@ -19,3 +19,4 @@ a named \link{list}
 \description{
 Implements \link[ramp.xds:VectorControl1]{ramp.xds::VectorControl1} for the control model of vector control (do nothing)
 }
+\keyword{internal}

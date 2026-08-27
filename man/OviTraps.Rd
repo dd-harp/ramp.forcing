@@ -17,3 +17,4 @@ OviTraps(t, xds_obj)
 \description{
 This method dispatches on the type of \code{xds_obj$ovitraps}.
 }
+\keyword{internal}

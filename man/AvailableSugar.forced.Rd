@@ -15,3 +15,4 @@ a \link{numeric} vector of length \code{nPatches}
 \description{
 Computes the availability of sugar
 }
+\keyword{internal}

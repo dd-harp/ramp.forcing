@@ -8,6 +8,7 @@
 #' @inheritParams setup_irs_effect_sizes
 #'
 #' @export
+#' @keywords internal
 setup_irs_effect_sizes.simple = function(name, xds_obj, s=1, options=list()){
   class(xds_obj$irs_obj$eff_sz_obj) = "simple"
   xds_obj$irs_obj$eff_sz_obj = make_irs_effect_sizes_simple(options)
@@ -24,6 +25,7 @@ setup_irs_effect_sizes.simple = function(name, xds_obj, s=1, options=list()){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 make_irs_effect_sizes_simple = function(options=list(),
                                         contact=1){
   es <- list()
@@ -39,6 +41,7 @@ make_irs_effect_sizes_simple = function(options=list(),
 #' @importFrom stats pexp
 #' @seealso [compute_irs_effect_sizes_simple()]
 #' @export
+#' @keywords internal
 IRS_Effect_Sizes.simple <- function(t, y, xds_obj, s){
   contact = xds_obj$irs_obj$contact
   with(xds_obj$MY_obj[[s]],{
@@ -59,6 +62,7 @@ IRS_Effect_Sizes.simple <- function(t, y, xds_obj, s){
 #' @param contact the probability of contact given coverage
 #' @return a **`ramp.xds`** model object
 #' @importFrom stats pexp
+#' @keywords internal
 compute_irs_effect_sizes_simple = function(ix, ff, qq, gg, contact){
   f=ff[ix]; q=qq[ix]; g=gg[ix]; contact=contact[ix]
   es = (gg+ff*qq*contact)/gg

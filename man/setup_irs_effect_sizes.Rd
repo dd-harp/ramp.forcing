@@ -23,3 +23,4 @@ Set up an object to model
 the effect_sizes of IRS, usually through the
 computation of some intermediate variable
 }
+\keyword{internal}

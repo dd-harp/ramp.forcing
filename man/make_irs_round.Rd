@@ -29,3 +29,4 @@ The parameters
 specify a model for the
 "killing potential" from the start of the spray round through the end.
 }
+\keyword{internal}

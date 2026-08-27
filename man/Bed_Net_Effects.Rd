@@ -18,3 +18,4 @@ the \strong{\code{xds}} model object
 Set the value of variables in a model that
 implements the effects of bed nets
 }
+\keyword{internal}

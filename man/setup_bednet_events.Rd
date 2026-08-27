@@ -41,3 +41,4 @@ a \strong{\code{ramp.xds}}  model object
 \description{
 Setup bednet Events
 }
+\keyword{internal}

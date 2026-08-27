@@ -18,3 +18,4 @@ If
 this function sets up the
 objects for all implemented modes of vector control.
 }
+\keyword{internal}

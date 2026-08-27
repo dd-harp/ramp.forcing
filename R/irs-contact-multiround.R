@@ -9,6 +9,7 @@
 #'
 #' @return a IRS contact model object
 #' @export
+#' @keywords internal
 setup_irs_contact.multiround = function(name, xds_obj, options=list()){
   class(xds_obj$vector_control_obj) = "dynamic"
   class(xds_obj$irs_obj) = "dynamic"
@@ -46,6 +47,7 @@ setup_irs_contact.multiround = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 change_irs_contact_multiround = function(xds_obj, contact){
   stopifnot(with(xds_obj, exists("events_obj")))
   stopifnot(with(xds_obj$events_obj, exists("irs")))
@@ -66,6 +68,7 @@ change_irs_contact_multiround = function(xds_obj, contact){
 #' @importFrom ramp.func make_function
 #'
 #' @export
+#' @keywords internal
 setup_F_contact_irs_multiround = function(xds_obj){
   xds_obj <- setup_irs_rounds(xds_obj, xds_obj$events_obj$irs$contact)
   with(xds_obj$events_obj$irs,{
@@ -83,6 +86,7 @@ setup_F_contact_irs_multiround = function(xds_obj){
 #' @inheritParams IRS_Contact
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Contact.multiround <- function(t, y, xds_obj) {
   with(xds_obj$irs_obj$contact_obj,{
     xds_obj$irs_obj$contact = F_contact(t)

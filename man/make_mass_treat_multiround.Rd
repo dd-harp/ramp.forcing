@@ -19,3 +19,4 @@ Using information about the events (see \link{setup_mass_treat_events}),
 including a parameter describing access, this makes a
 function that computes treatage over time.
 }
+\keyword{internal}

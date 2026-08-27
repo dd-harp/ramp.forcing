@@ -17,3 +17,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 The null model for own_bednets
 }
+\keyword{internal}

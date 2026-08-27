@@ -43,3 +43,4 @@ Implements \link{Bed_Net_Effect_Sizes} for the Le Menach ITN model of vector con
 {This implements the model for ITN effect sizes
 from \insertRef{LeMenachA2007_ITN}{ramp.control}}
 }
+\keyword{internal}

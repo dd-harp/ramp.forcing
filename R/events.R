@@ -19,6 +19,7 @@ get_events = function(xds_obj, type){
 #' @returns a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 get_events.irs = function(xds_obj, type){
   xds_obj$events_obj$irs
 }
@@ -30,6 +31,7 @@ get_events.irs = function(xds_obj, type){
 #' @returns a **`ramp.xds`**  model object
 #'
 #' @export
+#' @keywords internal
 get_events.bednet = function(xds_obj, type){
   xds_obj$events_obj$bednet
 }

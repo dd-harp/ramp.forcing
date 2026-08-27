@@ -19,3 +19,4 @@ For \code{eir} models, set up a multi-round
 sharkbite function to model effect sizes
 of bednet on the EIR as a perturbation.
 }
+\keyword{internal}

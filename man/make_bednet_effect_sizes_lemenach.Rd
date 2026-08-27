@@ -28,3 +28,4 @@ a bed net effect size model object
 Set up the model for the effect sizes of insecticide treated nets
 using the model by Le Menach, \emph{et al.}
 }
+\keyword{internal}

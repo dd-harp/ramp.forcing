@@ -24,3 +24,4 @@ Implements \link{Bed_Net_Effect_Sizes} for the Le Menach ITN model of vector con
 \seealso{
 \code{\link[=compute_bednet_effect_sizes_lemenach]{compute_bednet_effect_sizes_lemenach()}}
 }
+\keyword{internal}

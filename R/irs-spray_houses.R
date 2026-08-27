@@ -10,6 +10,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_spray_houses = function(name, xds_obj, options=list()){
   class(name) <- name
   UseMethod("setup_spray_houses", name)
@@ -27,6 +28,7 @@ setup_spray_houses = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_spray_houses.none = function(name, xds_obj, options=list()){
   xds_obj$irs_obj$spray_obj = make_none_object()
   return(xds_obj)
@@ -43,6 +45,7 @@ setup_spray_houses.none = function(name, xds_obj, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 SprayHouses <- function(t, y, xds_obj) {
   UseMethod("SprayHouses", xds_obj$irs_obj$spray_obj)
 }
@@ -55,6 +58,7 @@ SprayHouses <- function(t, y, xds_obj) {
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 SprayHouses.none <- function(t, y, xds_obj) {
   return(xds_obj)
 }

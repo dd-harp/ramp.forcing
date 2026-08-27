@@ -6,6 +6,7 @@
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 Hydrology <- function(t, xds_obj) {
   UseMethod("Hydrology", xds_obj$hydrology)
 }
@@ -15,6 +16,7 @@ Hydrology <- function(t, xds_obj) {
 #' @inheritParams Hydrology
 #' @return [list]
 #' @export
+#' @keywords internal
 Hydrology.none <- function(t, xds_obj) {
   return(xds_obj)
 }
@@ -23,6 +25,7 @@ Hydrology.none <- function(t, xds_obj) {
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_no_hydrology <- function(xds_obj) {
   hydrology <- list()
   hydrology$name <- 'none'
@@ -40,6 +43,7 @@ setup_no_hydrology <- function(xds_obj) {
 #' @param setup_no_forcing a list of options to override defaults
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_hydrology = function(Hname, xds_obj, setup_no_forcing=list()){
   class(Hname) <- Hname
   UseMethod("setup_hydrology", Hname)
@@ -50,6 +54,7 @@ setup_hydrology = function(Hname, xds_obj, setup_no_forcing=list()){
 #' @inheritParams Hydrology
 #' @return [list]
 #' @export
+#' @keywords internal
 Hydrology.func <- function(t, xds_obj) {with(xds_obj$hydrology,{
   xds_obj$vars$water_level = mean*F_season(t)*F_trend(t)
 })}
@@ -60,6 +65,7 @@ Hydrology.func <- function(t, xds_obj) {with(xds_obj$hydrology,{
 #' forcing and set all the
 #' @inheritParams setup_hydrology
 #' @export
+#' @keywords internal
 setup_hydrology.func = function(Hname, xds_obj, setup_no_forcing=list()){
   xds_obj = setup_hydrology_func(xds_obj, setup_no_forcing())
 }
@@ -76,6 +82,7 @@ setup_hydrology.func = function(Hname, xds_obj, setup_no_forcing=list()){
 #' @return an **`xds`** object
 #' @importFrom ramp.xds F_one
 #' @export
+#' @keywords internal
 setup_hydrology_func = function(xds_obj, setup_no_forcing=list(), mean=30, F_season=F_one, F_trend=F_one){
   hydrology <- list()
   class(hydrology) <- 'func'

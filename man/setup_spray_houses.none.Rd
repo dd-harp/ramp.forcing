@@ -19,3 +19,4 @@ a \strong{\code{ramp.xds}} model object
 \description{
 Set up the null house spraying model object
 }
+\keyword{internal}

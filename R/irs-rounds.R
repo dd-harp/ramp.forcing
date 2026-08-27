@@ -18,6 +18,7 @@
 #' @return a `sharkfin` function object
 #'
 #' @export
+#' @keywords internal
 make_irs_round = function(irs_type, start_day, peak, elength=20, pw=1) {
   profile = irs_profiles[irs_profiles$name == irs_type,]
   D = start_day+elength/2
@@ -42,6 +43,7 @@ make_irs_round = function(irs_type, start_day, peak, elength=20, pw=1) {
 #' @return a `sharkbite` function object
 #'
 #' @export
+#' @keywords internal
 make_irs_shock = function(irs_type, start_day, peak, elength=20, pw=1) {
   profile = irs_profiles[irs_profiles$name == irs_type,]
   D = start_day+elength/2
@@ -67,6 +69,7 @@ make_irs_shock = function(irs_type, start_day, peak, elength=20, pw=1) {
 #' @return a `sharkfin` function object
 #'
 #' @export
+#' @keywords internal
 make_irs_killing_profile = function(d_50, d_shape, start_day, peak, elength=20, pw=1) {
   D = start_day+elength/2
   uk = 5/elength
@@ -83,6 +86,7 @@ make_irs_killing_profile = function(d_50, d_shape, start_day, peak, elength=20, 
 #' @return a `sharkbite` function object
 #'
 #' @export
+#' @keywords internal
 make_irs_efsz_profile = function(d_50, d_shape, start_day, peak, elength=20, pw=1) {
   D = start_day+elength/2
   uk = 5/elength
@@ -102,6 +106,7 @@ make_irs_efsz_profile = function(d_50, d_shape, start_day, peak, elength=20, pw=
 #'
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 show_irs_profile = function(irs_type){
   pars <- make_irs_round(irs_type, 10, 1)
   mtl <- paste("IRS Killing Potential (", irs_type, ")", sep="")
@@ -123,6 +128,7 @@ show_irs_profile = function(irs_type){
 #'
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 show_irs_response_timeline = function(irs_type){
   pars <- make_irs_shock(irs_type, 10, 1)
   mtl <- paste("IRS - EIR Response Timeline (", irs_type, ")", sep="")

@@ -21,3 +21,4 @@ a \strong{\code{ramp.xds}} xds_obj object
 \description{
 Plot IRS Contact
 }
+\keyword{internal}

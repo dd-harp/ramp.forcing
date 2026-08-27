@@ -19,3 +19,4 @@
 \description{
 The null model for use_bednets
 }
+\keyword{internal}

@@ -15,3 +15,4 @@ a \link{list}
 \description{
 This method dispatches on the type of \code{xds_obj$SUGAR}.
 }
+\keyword{internal}

@@ -6,6 +6,7 @@
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 Rainfall <- function(t, xds_obj) {
   UseMethod("Rainfall", xds_obj$rainfall)
 }
@@ -15,6 +16,7 @@ Rainfall <- function(t, xds_obj) {
 #' @inheritParams Rainfall
 #' @return [list]
 #' @export
+#' @keywords internal
 Rainfall.none <- function(t, xds_obj) {
   return(xds_obj)
 }
@@ -23,6 +25,7 @@ Rainfall.none <- function(t, xds_obj) {
 #' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_no_rainfall <- function(xds_obj) {
   rainfall <- 'none'
   class(rainfall) <- 'none'
@@ -39,6 +42,7 @@ setup_no_rainfall <- function(xds_obj) {
 #' @param Topts a list of options to override defaults
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_rainfall = function(Tname, xds_obj, Topts=list()){
   class(Tname) <- Tname
   UseMethod("setup_rainfall", Tname)
@@ -49,6 +53,7 @@ setup_rainfall = function(Tname, xds_obj, Topts=list()){
 #' @inheritParams Rainfall
 #' @return [list]
 #' @export
+#' @keywords internal
 Rainfall.func <- function(t, xds_obj) {with(xds_obj$rainfall,{
   xds_obj$vars$Rainfall = mean*F_season(t)*F_trend(t)
 })}
@@ -59,6 +64,7 @@ Rainfall.func <- function(t, xds_obj) {with(xds_obj$rainfall,{
 #' forcing and set all the
 #' @inheritParams setup_rainfall
 #' @export
+#' @keywords internal
 setup_rainfall.func = function(Tname, xds_obj, Topts=list()){
   xds_obj = setup_rainfall_func(xds_obj, Topts())
 }
@@ -75,6 +81,7 @@ setup_rainfall.func = function(Tname, xds_obj, Topts=list()){
 #' @importFrom ramp.xds F_one
 #' @return an **`xds`** object
 #' @export
+#' @keywords internal
 setup_rainfall_func = function(xds_obj, Topts=list(), mean=30, F_season=F_one, F_trend=F_one){
   rainfall <- list()
   class(rainfall) <- 'func'

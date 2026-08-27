@@ -20,3 +20,4 @@ a \strong{\code{ramp.xds}} model object
 This computes
 \emph{effective_coverage}
 }
+\keyword{internal}

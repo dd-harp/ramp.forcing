@@ -48,3 +48,4 @@ a \strong{\code{ramp.xds}} model object
 This sets up a bed net
 model
 }
+\keyword{internal}

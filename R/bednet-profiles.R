@@ -19,6 +19,7 @@
 #' @return a `sharkfin` function object
 #'
 #' @export
+#' @keywords internal
 make_bednet_round = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
   D = start_day+length/2
   uk = 10/length
@@ -42,6 +43,7 @@ make_bednet_round = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
 #' @return a `sharkbite` function object
 #'
 #' @export
+#' @keywords internal
 make_bednet_shock = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
   D = start_day+length/2
   uk = 10/length
@@ -66,6 +68,7 @@ make_bednet_shock = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
 #' @return a `sharkfin` function object
 #'
 #' @export
+#' @keywords internal
 make_bednet_profile = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
   D = start_day+length/2
   uk = 5/length
@@ -82,6 +85,7 @@ make_bednet_profile = function(d_50, d_shape, start_day, peak, length=20, pw=1) 
 #' @return a `sharkbite` function object
 #'
 #' @export
+#' @keywords internal
 make_bednet_efsz_profile = function(d_50, d_shape, start_day, peak, length=20, pw=1) {
   D = start_day+length/2
   uk = 5/length
@@ -105,6 +109,7 @@ make_bednet_efsz_profile = function(d_50, d_shape, start_day, peak, length=20, p
 #' @return a **`xds`** object
 #'
 #' @export
+#' @keywords internal
 show_bednet_profile = function(d_50, d_shape, clr="black", add=FALSE){
   pars <- make_bednet_round(d_50, d_shape, 10, 1)
   ylb <- "Effective Coverage"
@@ -130,6 +135,7 @@ show_bednet_profile = function(d_50, d_shape, clr="black", add=FALSE){
 #'
 #' @return a **`xds`** object
 #' @export
+#' @keywords internal
 show_bednet_response_timeline = function(d_50, d_shape, clr="black", add=FALSE){
   pars <- make_bednet_shock(d_50, d_shape, 10, 1)
   ylb <- "Relative Effect"

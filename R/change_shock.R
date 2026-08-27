@@ -12,6 +12,7 @@
 #' @return an **`xds`** object
 #'
 #' @export
+#' @keywords internal
 change_shock = function(shock_par, xds_obj, s=1){
   UseMethod("change_shock", xds_obj$forced_by)
 }

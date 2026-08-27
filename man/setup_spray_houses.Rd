@@ -20,3 +20,4 @@ a \strong{\code{ramp.xds}} model object
 Set up an object to model
 house spraying
 }
+\keyword{internal}

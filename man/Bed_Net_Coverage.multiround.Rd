@@ -19,3 +19,4 @@ an \strong{\code{xds}} model object
 \description{
 The null model for bednet_coverage
 }
+\keyword{internal}

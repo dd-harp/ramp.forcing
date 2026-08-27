@@ -18,3 +18,4 @@ the \strong{\code{xds}} model object
 Set the value of variables related to
 bed net use
 }
+\keyword{internal}

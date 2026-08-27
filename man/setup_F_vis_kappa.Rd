@@ -21,3 +21,4 @@ an \strong{\code{xds}} object
 \description{
 Setup a model for the net infectiousness of visitors.
 }
+\keyword{internal}

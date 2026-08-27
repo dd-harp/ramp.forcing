@@ -12,6 +12,7 @@
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 setup_irs_effect_sizes = function(name, xds_obj, s=1, options=list()){
   class(name) <- name
   UseMethod("setup_irs_effect_sizes", name)
@@ -27,6 +28,7 @@ setup_irs_effect_sizes = function(name, xds_obj, s=1, options=list()){
 #' @return a **`ramp.xds`** model object
 #'
 #' @export
+#' @keywords internal
 setup_irs_effect_sizes.none = function(name, xds_obj, s=1, options=list()){
   xds_obj$irs_obj$eff_sz_obj = make_none_object()
   return(xds_obj)
@@ -44,6 +46,7 @@ setup_irs_effect_sizes.none = function(name, xds_obj, s=1, options=list()){
 #'
 #' @return a **`ramp.xds`** model object
 #' @export
+#' @keywords internal
 IRS_Effect_Sizes <- function(t, y, xds_obj, s=1) {
   UseMethod("IRS_Effect_Sizes", xds_obj$irs_obj$eff_sz_obj)
 }
@@ -53,6 +56,7 @@ IRS_Effect_Sizes <- function(t, y, xds_obj, s=1) {
 #' @inheritParams IRS_Effect_Sizes
 #' @return [list]
 #' @export
+#' @keywords internal
 IRS_Effect_Sizes.none <- function(t, y, xds_obj, s=1) {
   return(xds_obj)
 }
