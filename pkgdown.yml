@@ -1,8 +1,20 @@
-pandoc: 3.1.11
-pkgdown: 2.2.0
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2026-01-13T15:47Z
+articles:
+  BedNets: BedNets.html
+  bionomic_setup: bionomic_setup.html
+  eip_setup: eip_setup.html
+  Events: Events.html
+  Forcing: Forcing.html
+  IRS_Events: IRS_Events.html
+  IRS-insectides: IRS-insectides.html
+  IRS: IRS.html
+  MassTreatment: MassTreatment.html
+  ResponseTimelines: ResponseTimelines.html
+  Upsilon: Upsilon.html
+  vc_lemenach: vc_lemenach.html
+last_built: 2026-08-27T20:55Z
 urls:
   reference: https://dd-harp.github.io/ramp.forcing/reference
   article: https://dd-harp.github.io/ramp.forcing/articles

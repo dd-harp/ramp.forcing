@@ -1,0 +1,31 @@
+# Set up the visitor infectiousness model
+
+Setup a model for the net infectiousness of visitors.
+
+## Usage
+
+``` r
+setup_F_vis_kappa(mod_name, xds_obj, s, options)
+```
+
+## Arguments
+
+- mod_name:
+
+  the model name
+
+- xds_obj:
+
+  an **`xds`** model object
+
+- s:
+
+  the vector species index
+
+- options:
+
+  a list to configure `F_vis_kappa`
+
+## Value
+
+an **`xds`** object
