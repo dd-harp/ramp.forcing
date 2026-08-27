@@ -4,14 +4,15 @@
 \alias{AvailableSugar}
 \title{Update the availability of sugar}
 \usage{
-AvailableSugar(pars)
+AvailableSugar(xds_obj)
 }
 \arguments{
-\item{pars}{an [list]}
+\item{xds_obj}{an \link{list}}
 }
 \value{
-a [list]
+a \link{list}
 }
 \description{
-This method dispatches on the type of `pars$SUGAR`.
+This method dispatches on the type of \code{xds_obj$SUGAR}.
 }
+\keyword{internal}

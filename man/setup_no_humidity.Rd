@@ -4,14 +4,15 @@
 \alias{setup_no_humidity}
 \title{Set up "no humidity"}
 \usage{
-setup_no_humidity(pars)
+setup_no_humidity(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Set up "no humidity"
 }
+\keyword{internal}

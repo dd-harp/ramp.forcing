@@ -4,14 +4,15 @@
 \alias{setup_no_rainfall}
 \title{Set up "no rainfall"}
 \usage{
-setup_no_rainfall(pars)
+setup_no_rainfall(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Set up "no rainfall"
 }
+\keyword{internal}

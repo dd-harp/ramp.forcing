@@ -4,16 +4,17 @@
 \alias{OviTraps}
 \title{Methods for oviposition traps}
 \usage{
-OviTraps(t, pars)
+OviTraps(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-This method dispatches on the type of `pars$ovitraps`.
+This method dispatches on the type of \code{xds_obj$ovitraps}.
 }
+\keyword{internal}

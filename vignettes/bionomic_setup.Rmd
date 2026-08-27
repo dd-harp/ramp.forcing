@@ -1,0 +1,9 @@
+---
+title: "Bionomics Setup" 
+subtitle: "Setting up time-varying bionomic parameters" 
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Bionomics Setup}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---

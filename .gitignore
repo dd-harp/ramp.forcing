@@ -1,4 +1,7 @@
 
 /.Rproj.user
 docs
+.RData
+.Rhistory
+.RData
 .DS_Store

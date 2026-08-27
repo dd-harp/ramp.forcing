@@ -2,18 +2,21 @@
 % Please edit documentation in R/habitat_dynamics.R
 \name{HabitatDynamics.static}
 \alias{HabitatDynamics.static}
-\title{Set the values of habitat search weights and other exogenous variables describing habitat_dynamics}
+\title{HabitatDynamics (static)}
 \usage{
-\method{HabitatDynamics}{static}(t, pars)
+\method{HabitatDynamics}{static}(t, y, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{y}{state variables}
+
+\item{xds_obj}{an \strong{\code{xds}} model object}
 }
 \value{
-[list]
+an \strong{\code{xds}} object
 }
 \description{
-Implements [HabitatDynamics] for the static model of habitat_dynamics (do nothing)
+No-op for static habitat weights.
 }
+\keyword{internal}

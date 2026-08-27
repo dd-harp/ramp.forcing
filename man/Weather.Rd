@@ -4,16 +4,17 @@
 \alias{Weather}
 \title{Set the values of exogenous variables describing weather}
 \usage{
-Weather(t, pars)
+Weather(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-This method dispatches on the type of `pars$weather`.
+This method dispatches on the type of \code{xds_obj$weather}.
 }
+\keyword{internal}

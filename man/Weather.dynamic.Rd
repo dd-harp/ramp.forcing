@@ -4,16 +4,17 @@
 \alias{Weather.dynamic}
 \title{Methods for exogenous variables describing weather}
 \usage{
-\method{Weather}{dynamic}(t, pars)
+\method{Weather}{dynamic}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+an \strong{\code{xds}} object
 }
 \description{
-Implements exogenous forcing by [Weather]
+Implements exogenous forcing by \link{Weather}
 }
+\keyword{internal}

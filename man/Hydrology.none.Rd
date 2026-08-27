@@ -4,16 +4,17 @@
 \alias{Hydrology.none}
 \title{Set no hydrology}
 \usage{
-\method{Hydrology}{none}(t, pars)
+\method{Hydrology}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 The null model for hydrology
 }
+\keyword{internal}

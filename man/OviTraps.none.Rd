@@ -4,16 +4,17 @@
 \alias{OviTraps.none}
 \title{Methods for oviposition traps}
 \usage{
-\method{OviTraps}{none}(t, pars)
+\method{OviTraps}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
-Implements [OviTraps] for the none model (do nothing)
+Implements \link{OviTraps} for the none model (do nothing)
 }
+\keyword{internal}

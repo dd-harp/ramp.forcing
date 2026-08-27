@@ -4,16 +4,17 @@
 \alias{Temperature.none}
 \title{Set no temperature}
 \usage{
-\method{Temperature}{none}(t, pars)
+\method{Temperature}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 The null model for temperature
 }
+\keyword{internal}

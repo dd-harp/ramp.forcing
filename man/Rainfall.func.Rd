@@ -4,16 +4,17 @@
 \alias{Rainfall.func}
 \title{Set no rainfall}
 \usage{
-\method{Rainfall}{func}(t, pars)
+\method{Rainfall}{func}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 The null model for rainfall
 }
+\keyword{internal}

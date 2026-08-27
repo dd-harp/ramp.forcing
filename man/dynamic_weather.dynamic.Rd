@@ -4,16 +4,17 @@
 \alias{dynamic_weather.dynamic}
 \title{Set up dynamic weather}
 \usage{
-\method{dynamic_weather}{dynamic}(pars)
+\method{dynamic_weather}{dynamic}(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic weather has not
 already been set up, then turn on dynamic
 weather and set all the
 }
+\keyword{internal}

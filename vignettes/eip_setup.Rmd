@@ -1,0 +1,9 @@
+---
+title: "EIP Setup" 
+subtitle: "Setting up a time-varying EIP" 
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EIP Setup}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---

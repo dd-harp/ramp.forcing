@@ -4,10 +4,10 @@
 \alias{setup_shock_func}
 \title{Set up dynamic forcing}
 \usage{
-setup_shock_func(pars, opts = list(), eventT = 365, F_shock = NULL)
+setup_shock_func(xds_obj, opts = list(), eventT = 365, F_shock = NULL)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{opts}{a list of options to override defaults}
 
@@ -16,10 +16,11 @@ setup_shock_func(pars, opts = list(), eventT = 365, F_shock = NULL)
 \item{F_shock}{the effects of the shock}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

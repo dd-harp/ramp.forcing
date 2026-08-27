@@ -4,16 +4,17 @@
 \alias{dynamic_forcing.dynamic}
 \title{Set up dynamic forcing}
 \usage{
-\method{dynamic_forcing}{dynamic}(pars)
+\method{dynamic_forcing}{dynamic}(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

@@ -5,15 +5,15 @@
 \title{Set up dynamic forcing}
 \usage{
 setup_rainfall_func(
-  pars,
+  xds_obj,
   Topts = list(),
   mean = 30,
-  F_season = F_flat,
-  F_trend = F_flat
+  F_season = F_one,
+  F_trend = F_one
 )
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{Topts}{a list of options to override defaults}
 
@@ -24,10 +24,11 @@ setup_rainfall_func(
 \item{F_trend}{a temporal trend in rainfall}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

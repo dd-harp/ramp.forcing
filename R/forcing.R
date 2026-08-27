@@ -4,14 +4,17 @@
 #' values of exogenous variables and then revert
 #' the `none` case
 #' @param t current simulation time
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
-Forcing.setup = function(t, pars){
-  class(pars$forcing) <- 'dynamic'
-  pars <- Forcing(t, pars)
-  class(pars$forcing) <- 'none'
-  return(pars)
+Forcing.setup = function(t, xds_obj){
+  class(xds_obj$forcing_obj) <- 'dynamic'
+  xds_obj <- Forcing(t, xds_obj)
+  class(xds_obj$forcing_obj) <- 'none'
+  return(xds_obj)
 }
 
 #' @title Set the values of exogenous variables
@@ -22,66 +25,81 @@ Forcing.setup = function(t, pars){
 #' - Shock
 #' - Development
 #' @param t current simulation time
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
 #' @return an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @export
 #' @seealso [dynamic_forcing]
-Forcing.dynamic = function(t, pars){
-  pars <- Weather(t, pars)
-  pars <- Hydrology(t, pars)
-  pars <- Shock(t, pars)
-  pars <- Development(t, pars)
-  return(pars)
+Forcing.dynamic = function(t, xds_obj){
+  xds_obj <- Weather(t, xds_obj)
+  xds_obj <- Hydrology(t, xds_obj)
+  xds_obj <- Shock(t, xds_obj)
+  xds_obj <- Development(t, xds_obj)
+  return(xds_obj)
 }
 
 #' @title Set up dynamic forcing
 #' @description If dynamic forcing has not
 #' already been set up, then turn on dynamic
 #' forcing and set all the
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
-dynamic_forcing = function(pars){
-  UseMethod("dynamic_forcing", pars$forcing)
+dynamic_forcing = function(xds_obj){
+  UseMethod("dynamic_forcing", xds_obj$forcing_obj)
 }
 
 #' @title Set up dynamic forcing
 #' @description If dynamic forcing has not
 #' already been set up, then turn on dynamic
 #' forcing and set all the
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
-dynamic_forcing.none = function(pars){
+dynamic_forcing.none = function(xds_obj){
   forcing <- 'dynamic'
   class(forcing) <- 'dynamic'
-  pars$forcing <- forcing
-  pars <- setup_no_weather(pars)
-  pars <- setup_no_hydrology(pars)
-  pars <- setup_no_shock(pars)
-  pars <- setup_no_development(pars)
-  return(pars)
+  xds_obj$forcing_obj <- forcing
+  xds_obj <- setup_no_weather(xds_obj)
+  xds_obj <- setup_no_hydrology(xds_obj)
+  xds_obj <- setup_no_shock(xds_obj)
+  xds_obj <- setup_no_development(xds_obj)
+  return(xds_obj)
 }
 
 #' @title Set up dynamic forcing
 #' @description If dynamic forcing has not
 #' already been set up, then turn on dynamic
 #' forcing and set all the
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
-dynamic_forcing.setup = function(pars){
-  return(pars)
+dynamic_forcing.setup = function(xds_obj){
+  return(xds_obj)
 }
 
 #' @title Set up dynamic forcing
 #' @description If dynamic forcing has not
 #' already been set up, then turn on dynamic
 #' forcing and set all the
-#' @param pars an **`xds`** object
+#' @param xds_obj an **`xds`** object
+#'
+#' @keywords internal
+#'
 #' @return an **`xds`** object
 #' @export
-dynamic_forcing.dynamic = function(pars){
-  return(pars)
+dynamic_forcing.dynamic = function(xds_obj){
+  return(xds_obj)
 }
 

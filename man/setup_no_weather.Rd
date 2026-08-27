@@ -4,14 +4,15 @@
 \alias{setup_no_weather}
 \title{Set up the no_forcing model for weather}
 \usage{
-setup_no_weather(pars)
+setup_no_weather(xds_obj)
 }
 \arguments{
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Set up the no_forcing model for weather
 }
+\keyword{internal}

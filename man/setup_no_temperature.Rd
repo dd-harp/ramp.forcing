@@ -4,14 +4,15 @@
 \alias{setup_no_temperature}
 \title{Set up "no temperature"}
 \usage{
-setup_no_temperature(pars)
+setup_no_temperature(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Set up "no temperature"
 }
+\keyword{internal}

@@ -4,16 +4,17 @@
 \alias{Humidity.func}
 \title{Set no humidity}
 \usage{
-\method{Humidity}{func}(t, pars)
+\method{Humidity}{func}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 The null model for humidity
 }
+\keyword{internal}

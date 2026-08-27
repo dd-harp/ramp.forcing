@@ -4,14 +4,15 @@
 \alias{setup_no_shock}
 \title{Set up "no shock"}
 \usage{
-setup_no_shock(pars)
+setup_no_shock(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Set up "no shock"
 }
+\keyword{internal}

@@ -4,16 +4,17 @@
 \alias{Development.func}
 \title{Set no development}
 \usage{
-\method{Development}{func}(t, pars)
+\method{Development}{func}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 The null model for development
 }
+\keyword{internal}

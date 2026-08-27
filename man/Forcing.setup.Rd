@@ -2,20 +2,21 @@
 % Please edit documentation in R/forcing.R
 \name{Forcing.setup}
 \alias{Forcing.setup}
-\title{The `setup` case for exogenous forcing}
+\title{The \code{setup} case for exogenous forcing}
 \usage{
-Forcing.setup(t, pars)
+\method{Forcing}{setup}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Call all the functions to set the
 values of exogenous variables and then revert
-the `none` case
+the \code{none} case
 }
+\keyword{internal}

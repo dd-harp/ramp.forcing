@@ -1,15 +1,36 @@
-url: https://dd-harp.github.io/ramp.forcing/
+template:
+  bootstrap: 5
+  math-rendering: mathjax
+url: https://dd-harp.github.io/ramp.forcing
 navbar:
   left:
+  - text: Setup
+    menu:
+    - text: Bionomic Parameters
+      href: articles/bionomic_setup.html
+    - text: EIP
+      href: articles/eip_setup.html
   - text: Articles
     menu:
+    - text: Forced Bionomics with Lags
+      href: articles/Upsilon.html
+    - text: Bed Nets
+      href: articles/BedNets.html
     - text: Vector Control Example
       href: articles/vc_lemenach.html
+    - text: IRS
+      href: articles/IRS.html
+    - text: IRS - Insecticides
+      href: articles/IRS-insectides.html
+    - text: Mass Treatment
+      href: articles/MassTreatment.html
+    - text: Response Timelines
+      href: articles/ResponseTimelines.html
   - text: Functions
     href: reference/index.html
   right:
   - icon: fa-github
-    href: https://github.com/dd-harp/ramp.xds/
+    href: https://github.com/dd-harp/ramp.forcing/
 home:
   sidebar:
     structure:
@@ -20,148 +41,112 @@ home:
     - authors
     - dev
 reference:
-- title: Forcing
+- title: Mass Treatment
   desc: |
-    Specialized methods the null model (no exogenous forcing)
+    Specialized methods to manage mass drug administration
   contents:
-  - Forcing.dynamic
-  - Forcing.setup
-  - dynamic_forcing
-  - dynamic_forcing.none
-  - dynamic_forcing.setup
-  - dynamic_forcing.dynamic
-- subtitle: Models
+  - setup_mass_treat_events
+  - add_mass_treat_events
+  - setup_mass_treat_multiround
+  - make_mass_treat_multiround
+  - make_F_mass_treat
+  - show_mda
+  - show_msat
+- title: Vector Control
   desc: |
-    Specialized methods the null model (no exogenous forcing)
+    Specialized methods to manage the vector control junction
   contents:
-  - Shock.none
-  - setup_no_shock
-  - Development.none
-  - Development.func
-  - setup_no_development
-- title: Weather
+  - setup_bednet_access
+  - setup_bednet_use
+  - setup_bednet_effects
+  - setup_bednet_coverage
+  - change_bednet_coverage
+  - show_bednet_coverage
+  - setup_bednet_contact
+  - get_bednet_contact
+  - change_bednet_contact
+  - show_bednet_contact
+  - add_bednet_events
+  - change_bednet_contact_multiround
+  - change_bednet_coverage_multiround
+  - make_bednet_round
+  - get_bednet_contact
+  - setup_bednet_events
+  - show_bednet_events
+  - show_events
+  - setup_bednet_effect_sizes
+  - make_bednet_effect_sizes_lemenach
+  - compute_bednet_effect_sizes_lemenach
+  - make_bednet_efsz_profile
+  - make_bednet_shock
+  - change_bednet_shock_multiround
+  - show_bednet_response_timeline
+  - show_bednet_shock
+  - setup_bednet_rounds
+  - setup_bednet_shock_multiround
+- title: IRS
   desc: |
-    Specialized methods for weather
+    Specialized methods to implement IRS
   contents:
-  - Weather
-  - Weather.none
-  - Weather.dynamic
-  - setup_no_weather
-  - dynamic_weather
-  - dynamic_weather.none
-  - dynamic_weather.setup
-  - dynamic_weather.dynamic
-- subtitle: Temperature
+  - setup_irs
+  - setup_spray_houses
+  - setup_irs_effects
+  - setup_irs_effect_sizes
+  - make_irs_effect_sizes_simple
+  - compute_irs_effect_sizes_simple
+  - setup_irs_coverage
+  - get_irs_coverage
+  - show_irs_coverage
+  - setup_irs_events
+  - show_irs_events
+  - setup_irs_contact
+  - get_irs_contact
+  - show_irs_contact
+  - setup_irs_events
+  - show_irs_events
+  - add_irs_events
+  - change_irs_contact
+  - change_irs_contact_multiround
+  - change_irs_coverage_multiround
+  - change_irs_coverage
+  - make_irs_round
+- title: LSM
   desc: |
-    Specialized methods for temperature
+    Specialized methods to model LSM
   contents:
-  - Temperature
-  - Temperature.none
-  - setup_no_temperature
-  - setup_temperature
-  - Temperature.func
-  - setup_temperature.func
-  - setup_temperature_func
-- subtitle: Rainfall
+  - setup_lsm_object
+- title: Sugar Baits
   desc: |
-    Specialized methods for rainfall
+    Specialized methods to model Sugar Baits
   contents:
-  - Rainfall
-  - Rainfall.none
-  - setup_no_rainfall
-  - setup_rainfall
-  - Rainfall.func
-  - setup_rainfall.func
-  - setup_rainfall_func
-- subtitle: Humidity
+  - setup_atsb_object
+- title: Area Spraying
   desc: |
-    Specialized methods for humidity
+    Specialized methods to model area spraying
   contents:
-  - Humidity
-  - Humidity.none
-  - setup_no_humidity
-  - setup_humidity
-  - Humidity.func
-  - setup_humidity.func
-  - setup_humidity_func
-- subtitle: Hydrology
+  - setup_area_spray_object
+- title: Utilities
   desc: |
-    Specialized methods for hydrology
+    Useful Functions
   contents:
-  - Hydrology
-  - Hydrology.none
-  - setup_no_hydrology
-  - Hydrology.func
-  - setup_hydrology
-  - setup_hydrology.func
-  - setup_hydrology_func
-- subtitle: Shock
-  desc: |
-    Specialized methods for hydrology
-  contents:
-  - Shock
-  - Shock.none
-  - setup_no_shock
-  - setup_shock
-  - Shock.func
-  - setup_shock.func
-  - setup_shock_func
-- subtitle: Development
-  desc: |
-    Specialized methods for hydrology
-  contents:
-  - Development
-  - Development.none
-  - setup_no_development
-  - setup_development
-  - Development.func
-  - setup_development.func
-  - setup_development_func
-- title: Resource Dynamics
-  desc: |
-    Methods to implement resource availability
-  contents:
-  - Resources.setup
-  - Resources.forced
-  - setup_resources_forced
-- subtitle: Other Blood Hosts
-  desc: |
-    Methods to simulate availability of other blood hosts
-  contents:
-  - OtherBloodHosts
-  - OtherBloodHosts.static
-  - setup_other_blood_hosts_static
-- subtitle: Ovitraps
-  desc: |
-    Methods to simulate availability of other blood hosts
-  contents:
-  - OviTraps
-  - OviTraps.none
-  - setup_no_ovitraps
-- subtitle: Sugar
-  desc: |
-    Methods to simulate availability of sugar
-  contents:
-  - SugarDynamics
-  - SugarDynamics.static
-  - setup_sugar_static
-  - AvailableSugar
-  - AvailableSugar.static
-  - AvailableSugar.forced
-- subtitle: Habitat Dynamics and Availability
-  desc: |
-    Specialized methods for weather
-  contents:
-  - HabitatDynamics
-  - HabitatDynamics.static
-  - setup_habitat_dynamics_static
-- subtitle: Visiting
-  desc: |
-    Methods for the availability and infectiousness of a visitor population
-  contents:
-  - Visiting
-  - Visiting.static
-  - setup_visitors_static
-  - Visiting.basic
-  - setup_visitors_basic
-
+  - show_spline_points
+  - make_none_object
+  - makepar_F_multiround
+  - get_events
+  - irs_profiles
+  - change_irs_shock_multiround
+  - make_irs_efsz_profile
+  - make_irs_killing_profile
+  - make_irs_shock
+  - show_irs_shock
+  - show_irs_profile
+  - show_irs_response_timeline
+  - makepar_F_multishock
+  - make_bednet_profile
+  - show_bednet_profile
+  - setup_F_contact_bednet_multiround
+  - setup_F_contact_irs_multiround
+  - setup_F_coverage_bednet_multiround
+  - setup_F_coverage_irs_multiround
+  - setup_F_multishock
+  - setup_irs_rounds

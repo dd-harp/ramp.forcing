@@ -4,24 +4,27 @@
 \alias{Forcing.dynamic}
 \title{Set the values of exogenous variables}
 \usage{
-Forcing.dynamic(t, pars)
+\method{Forcing}{dynamic}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 With dynamic forcing, exogenous variables
 can be set in one of four function calls:
-- Weather
-- Hydrology
-- Shock
-- Development
+\itemize{
+\item Weather
+\item Hydrology
+\item Shock
+\item Development
+}
 }
 \seealso{
-[dynamic_forcing]
+\link{dynamic_forcing}
 }
+\keyword{internal}

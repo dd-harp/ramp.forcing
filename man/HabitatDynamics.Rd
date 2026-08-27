@@ -2,18 +2,23 @@
 % Please edit documentation in R/habitat_dynamics.R
 \name{HabitatDynamics}
 \alias{HabitatDynamics}
-\title{Habitat Dynamics and Searching}
+\title{Habitat Dynamics}
 \usage{
-HabitatDynamics(t, pars)
+HabitatDynamics(t, y, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{y}{state variables}
+
+\item{xds_obj}{an \strong{\code{xds}} model object}
 }
 \value{
-[list]
+an \strong{\code{xds}} object
 }
 \description{
-Set the values of habitat search weights and other exogenous variables describing habitat_dynamics. This method dispatches on the type of `pars$HABITAT_DYNAMICS`.
+Junction that modifies search weights for
+habitats and availability of bad habitat.
+Activated by \link{dynamic_resources}.
 }
+\keyword{internal}

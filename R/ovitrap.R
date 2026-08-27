@@ -1,13 +1,14 @@
 # generic methods for oviposition traps
 
 #' @title Methods for oviposition traps
-#' @description This method dispatches on the type of `pars$ovitraps`.
+#' @description This method dispatches on the type of `xds_obj$ovitraps`.
 #' @param t current simulation time
-#' @param pars a [list]
+#' @param xds_obj a [list]
 #' @return [list]
 #' @export
-OviTraps <- function(t, pars) {
-  UseMethod("OviTraps", pars$ovitraps)
+#' @keywords internal
+OviTraps <- function(t, xds_obj) {
+  UseMethod("OviTraps", xds_obj$ovitraps)
 }
 
 #' @title Methods for oviposition traps
@@ -15,17 +16,19 @@ OviTraps <- function(t, pars) {
 #' @inheritParams OviTraps
 #' @return [list]
 #' @export
-OviTraps.none <- function(t, pars) {
-  return(pars)
+#' @keywords internal
+OviTraps.none <- function(t, xds_obj) {
+  return(xds_obj)
 }
 
 #' @title Set up the none model for oviposition traps (do nothing)
-#' @param pars a [list]
+#' @param xds_obj a [list]
 #' @return [list]
 #' @export
-setup_no_ovitraps <- function(pars) {
+#' @keywords internal
+setup_no_ovitraps <- function(xds_obj) {
   ovitraps <- list()
   class(ovitraps) <- 'none'
-  pars$ovitraps <- ovitraps
-  return(pars)
+  xds_obj$ovitraps <- ovitraps
+  return(xds_obj)
 }

@@ -4,16 +4,17 @@
 \alias{Shock.func}
 \title{Set no shock}
 \usage{
-\method{Shock}{func}(t, pars)
+\method{Shock}{func}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-[list]
+an \strong{\code{xds}} object
 }
 \description{
 The null model for shock
 }
+\keyword{internal}

@@ -4,20 +4,21 @@
 \alias{setup_shock}
 \title{Set up dynamic forcing}
 \usage{
-setup_shock(name, pars, opts = list())
+setup_shock(name, xds_obj, opts = list())
 }
 \arguments{
 \item{name}{the name of a model to set up}
 
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 
 \item{opts}{a list of options to override defaults}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 If dynamic forcing has not
 already been set up, then turn on dynamic
 forcing and set all the
 }
+\keyword{internal}

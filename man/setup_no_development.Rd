@@ -4,14 +4,15 @@
 \alias{setup_no_development}
 \title{Set up "no development"}
 \usage{
-setup_no_development(pars)
+setup_no_development(xds_obj)
 }
 \arguments{
-\item{pars}{an **`xds`** object}
+\item{xds_obj}{an \strong{\code{xds}} object}
 }
 \value{
-an **`xds`** object
+an \strong{\code{xds}} object
 }
 \description{
 Set up "no development"
 }
+\keyword{internal}

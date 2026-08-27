@@ -4,16 +4,17 @@
 \alias{Weather.none}
 \title{Methods for exogenous variables describing weather}
 \usage{
-\method{Weather}{none}(t, pars)
+\method{Weather}{none}(t, xds_obj)
 }
 \arguments{
 \item{t}{current simulation time}
 
-\item{pars}{a [list]}
+\item{xds_obj}{a \link{list}}
 }
 \value{
-[list]
+\link{list}
 }
 \description{
 Implements a null weather model
 }
+\keyword{internal}
