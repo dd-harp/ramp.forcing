@@ -142,8 +142,8 @@ reference:
   desc: |
     Methods to simulate availability of sugar
   contents:
-  - SugarDynamics
-  - SugarDynamics.static
+  - Sugar
+  - Sugar.static
   - setup_sugar_static
   - AvailableSugar
   - AvailableSugar.static
