@@ -4,7 +4,7 @@
 \alias{change_season}
 \title{Change season parameters}
 \usage{
-change_season(X, xds_obj, s = 1)
+change_season(X, xds_obj, ix = 1)
 }
 \arguments{
 \item{X}{a list with new parameters for bottom, phase, and pw}
