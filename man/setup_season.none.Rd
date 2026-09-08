@@ -17,6 +17,6 @@
 an \strong{\code{xds}} object
 }
 \description{
-Change season parameters
+Setup season for the NULL case
 }
 \keyword{internal}
