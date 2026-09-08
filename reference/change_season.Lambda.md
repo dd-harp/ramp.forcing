@@ -20,6 +20,10 @@ change_season(X, xds_obj, ix = 1)
 
   an **`xds`** model object
 
+- ix:
+
+  the vector species index
+
 ## Value
 
 an **`xds`** object
