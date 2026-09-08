@@ -10,6 +10,8 @@
 \item{X}{a list with new parameters for bottom, phase, and pw}
 
 \item{xds_obj}{an \strong{\code{xds}} model object}
+
+\item{ix}{the vector species index}
 }
 \value{
 an \strong{\code{xds}} object

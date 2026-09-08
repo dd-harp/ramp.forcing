@@ -11,7 +11,7 @@ change_season(X, xds_obj, ix = 1)
 
 \item{xds_obj}{an \strong{\code{xds}} model object}
 
-\item{s}{the vector species index}
+\item{ix}{the vector species index}
 }
 \value{
 an \strong{\code{xds}} object
