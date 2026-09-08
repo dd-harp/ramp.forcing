@@ -5,7 +5,7 @@
 #'
 #' @param X a list with new parameters for bottom, phase, and pw
 #' @param xds_obj an **`xds`** model object
-#' @param s the vector species index
+#' @param ix the vector species index
 #'
 #' @return an **`xds`** object
 #'
