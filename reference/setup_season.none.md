@@ -1,6 +1,6 @@
 # Change season parameters
 
-Change season parameters
+Setup season for the NULL case
 
 ## Usage
 

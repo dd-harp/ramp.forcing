@@ -175,6 +175,12 @@
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_events.irs.html</loc></url>
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_irs_contact.html</loc></url>
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_irs_coverage.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.sharkbite.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.sharkfin.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.sin.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.spline2.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.splineX.html</loc></url>
+<url><loc>https://dd-harp.github.io/ramp.forcing/reference/get_variables.splinef.html</loc></url>
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/habitat_dynamics.html</loc></url>
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/index.html</loc></url>
 <url><loc>https://dd-harp.github.io/ramp.forcing/reference/irs_profiles.html</loc></url>
